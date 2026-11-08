@@ -1,0 +1,765 @@
+id,text,channel,label,category,red_flags
+syn-0001,"Capital One: Unusual sign-in from Richardson. If this wasn't you, confirm your login and PIN here: fastpay-verify.click Have a great day!",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:fastpay-verify.click
+syn-0002,"Subject: Your statement is ready
+
+Your monthly statement is available in the Capital One app. For your security we never include links asking you to sign in.",email,legit,legit_bank_alert,
+syn-0003,Wells Fargo Alert: Your balance is below $50. Log in using the Wells Fargo app to review. Do not reply with personal info.,sms,legit,legit_bank_alert,
+syn-0004,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $2,500 fine online at fastpay-verify.click today to avoid court action.",email,scam,toll_fine,"threat:Traffic violation notice || payment:Pay the $2,500 fine online || link:fastpay-verify.click || urgency:today"
+syn-0005,"Subject: Your order has shipped
+
+Hi Dave, your order shipped and should arrive Monday. Track it anytime at ups.com/track. No action needed.",email,legit,legit_delivery,
+syn-0006,"Hi Dave, US Bank: A purchase of $89.00 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN.",sms,legit,legit_bank_alert,
+syn-0007,FYI: Your Capital One card ending in 4821 was declined. Reactivate now to avoid fees: chase-secure-alert.co,sms,scam,bank_account_locked,urgency:Reactivate now || link:chase-secure-alert.co
+syn-0008,"Hi, this is Dr. Alvarez's office calling to confirm your appointment Monday at 2:15 PM. Please call us back at (800) 555-0199 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0009,"Subject: Appointment confirmation
+
+Hi Linda, this confirms your visit on Friday at 9:30 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0010,"Hi Maria, USPS: Delivered. Your package was left at the front door at 11:45 AM.",sms,legit,legit_delivery,
+syn-0011,"Hi Carlos, Your Bitcoin wallet has a security issue. Enter your recovery phrase to secure it: tinyurl.com/y8fz2p Thank you.",sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:tinyurl.com/y8fz2p
+syn-0012,"FYI: Hi, wrong number? Anyway, my uncle's trading team made me 600% returns in a month with Ethereum. I can show you how, spots are filling fast: usps-redelivery.info Reply STOP to opt out.",sms,scam,crypto_investment,"prize:600% returns in a month || urgency:show you how, spots are filling fast || link:usps-redelivery.info"
+syn-0013,"FYI: T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 48h: irs-refund-claim.net Reply STOP to opt out.",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 48h || link:irs-refund-claim.net"
+syn-0014,Notice: T-Mobile Alert: Your bill of $149.99 is overdue and service will be suspended. Pay now at acct-update-now.xyz.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:acct-update-now.xyz
+syn-0015,Notice: Your T-Mobile verification code is 392667. It expires in 10 minutes. Never share this code with anyone. Thank you.,sms,legit,legit_2fa,
+syn-0016,"Hi Priya, Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Thank you.",sms,legit,legit_friend,
+syn-0017,"Hi Jake, Reminder: you have an appointment with Dr. Nguyen on Friday at 2:15 PM. Reply C to confirm or call the office to reschedule.",sms,legit,legit_appointment,
+syn-0018,"Hi Tom, NTTA: You have an unpaid toll balance of $89.00. Late fees will apply after today. Pay now: bit.ly/3xK9aQ Msg&data rates may apply.",sms,scam,toll_fine,threat:unpaid toll balance of $89.00 || threat:Late fees will apply || payment:Pay now || link:bit.ly/3xK9aQ
+syn-0019,UPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: acct-update-now.xyz,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:acct-update-now.xyz
+syn-0020,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Google Play gift cards?",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Google Play gift cards"
+syn-0021,"Hi, this is Dr. Nguyen's office calling to confirm your appointment Monday at 11:45 AM. Please call us back at (512) 555-0123 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0022,This is your carrier security. We noticed someone trying to port your number. Please say your account PIN and last four of your SSN to cancel the request.,voicemail,scam,carrier_sim_swap,threat:someone trying to port your number || credential_request:Please say your account PIN and last four of your SSN
+syn-0023,"Hi Carlos, T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: track-parcel-now.cc",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 2h || link:track-parcel-now.cc"
+syn-0024,"Subject: Your statement is ready
+
+Your monthly statement is available in the US Bank app. For your security we never include links asking you to sign in.",email,legit,legit_bank_alert,
+syn-0025,"Subject: Appointment confirmation
+
+Hi Emily, this confirms your visit on Monday at 9:30 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0026,"My love, I'm stuck at the airport and my card is blocked. Could you send $412.37 in Google Play gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Thank you.",sms,scam,romance,payment:send $412.37 in Google Play gift cards || urgency:pay you back the moment I land
+syn-0027,"Urgent!! forgot my keys, can you let me in? I'm outside Thank you.",sms,legit,legit_friend,
+syn-0028,US Bank: Your one-time passcode is 924908. We will never call or text asking for it. Msg&data rates may apply.,sms,legit,legit_2fa,
+syn-0029,FYI: Did you see the game last night?? unreal. Dinner Friday?,sms,legit,legit_friend,
+syn-0030,"Hi Maria, Urgent!! forgot my keys, can you let me in? I'm outside",sms,legit,legit_friend,
+syn-0031,This is an automated message from the Chase fraud department. Your debit card has been compromised. Press 1 immediately to speak with an agent and have your card number and PIN ready.,voicemail,scam,bank_account_locked,threat:compromised || urgency:Press 1 immediately || credential_request:have your card number and PIN ready
+syn-0032,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at irs-refund-claim.net within 12 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:irs-refund-claim.net
+syn-0033,"Hello, Hi Aisha, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal. Thank you.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0034,"Subject: Missing you
+
+Darling, I need $89.00 for a plane ticket to finally come see you. Wire it via Bitcoin and keep this just between us.",email,scam,romance,payment:$89.00 for a plane ticket || payment:Wire it via Bitcoin || urgency:just between us
+syn-0035,Notice: US Bank: Your one-time passcode is 160099. We will never call or text asking for it.,sms,legit,legit_2fa,
+syn-0036,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $35.50; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0037,"Hi Aisha, USPS Delivery Alert: a package requires a signature. Reply with a time window or reschedule at fedex.com/track. Msg&data rates may apply.",sms,legit,legit_delivery,
+syn-0038,USPS: Your package 2372075984 is out for delivery today. Track at t-mobile.com/myaccount.,sms,legit,legit_delivery,
+syn-0039,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($35.50). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0040,"Subject: Your plan is changing
+
+Hi Dave, effective next month your plan price changes. Details at t-mobile.com/myaccount. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0041,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($1,284.50). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0042,"Subject: Missing you
+
+Darling, I need $2,500 for a plane ticket to finally come see you. Wire it via Ethereum and keep this just between us.",email,scam,romance,"payment:$2,500 for a plane ticket || payment:Wire it via Ethereum || urgency:just between us"
+syn-0043,FYI: DHL: Your package 4530216086 is out for delivery today. Track at ups.com/track.,sms,legit,legit_delivery,
+syn-0044,FYI: T-Mobile: Your bill of $35.50 is ready and will autopay on the 15th. View it in the T-Life app. Reply STOP to opt out.,sms,legit,legit_carrier,
+syn-0045,"Hi Tom, Your login code is 237472. If you didn't request this, you can ignore this message. Msg&data rates may apply.",sms,legit,legit_2fa,
+syn-0046,Citi: Your one-time passcode is 342700. We will never call or text asking for it.,sms,legit,legit_2fa,
+syn-0047,This is Social Security Administration. Your number has been suspended due to criminal activity. Press 1 now or legal action will begin.,voicemail,scam,irs_government,impersonation:Social Security Administration || threat:suspended due to criminal activity || urgency:Press 1 now || threat:legal action will begin
+syn-0048,USPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: bit.ly/3xK9aQ Reply STOP to opt out.,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:bit.ly/3xK9aQ
+syn-0049,"Subject: Missing you
+
+Darling, I need $412.37 for a plane ticket to finally come see you. Wire it via Bitcoin and keep this just between us.",email,scam,romance,payment:$412.37 for a plane ticket || payment:Wire it via Bitcoin || urgency:just between us
+syn-0050,"Subject: Your statement is ready
+
+Your monthly statement is available in the Bank of America app. For your security we never include links asking you to sign in.",email,legit,legit_bank_alert,
+syn-0051,Your Windows license has expired. Renew now at secure-verify-login.top to avoid data loss. Msg&data rates may apply.,sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:secure-verify-login.top
+syn-0052,IRS: You are owed a tax refund of $149.99. Submit your SSN and bank details to claim: track-parcel-now.cc,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:track-parcel-now.cc
+syn-0053,"hey it's Maria! running 10 min late, grab us a table? Have a great day!",sms,legit,legit_friend,
+syn-0054,"Hi Maria, Your Windows license has expired. Renew now at acct-update-now.xyz to avoid data loss. Thank you.",sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:acct-update-now.xyz
+syn-0055,"Hi Aisha, Norton: Your subscription renewed for $2,500. If you didn't authorize this, call (800) 555-0199 now for a refund. Have a great day!",sms,scam,tech_support,impersonation:Norton || urgency:call (800) 555-0199 now
+syn-0056,"Hi Aisha, Hi Aisha, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0057,"Subject: Your plan is changing
+
+Hi Sam, effective next month your plan price changes. Details at t-mobile.com/myaccount. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0058,"Hi Sam, your carrier: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Have a great day!",sms,legit,legit_carrier,
+syn-0059,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $149.99 fine online at tinyurl.com/y8fz2p today to avoid court action.",email,scam,toll_fine,threat:Traffic violation notice || payment:Pay the $149.99 fine online || link:tinyurl.com/y8fz2p || urgency:today
+syn-0060,"Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Msg&data rates may apply.",sms,legit,legit_friend,
+syn-0061,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $1,284.50 fine online at usps-redelivery.info today to avoid court action.",email,scam,toll_fine,"threat:Traffic violation notice || payment:Pay the $1,284.50 fine online || link:usps-redelivery.info || urgency:today"
+syn-0062,T-Mobile Alert: Your bill of $35.50 is overdue and service will be suspended. Pay now at secure-verify-login.top. Reply STOP to opt out.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:secure-verify-login.top
+syn-0063,"Hi Dave! We found your resume. Earn $22/hr working from home, no experience needed. Limited spots. Text back to start: tinyurl.com/y8fz2p Reply STOP to opt out.",sms,scam,job_offer,payment:Earn $22/hr working from home || urgency:Limited spots || link:tinyurl.com/y8fz2p
+syn-0064,Your USDT wallet has a security issue. Enter your recovery phrase to secure it: secure-verify-login.top,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:secure-verify-login.top
+syn-0065,"Subject: Verify your your carrier account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at secure-verify-login.top within 2 hours.",email,scam,carrier_sim_swap,urgency:Verify your your carrier account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:secure-verify-login.top
+syn-0066,"T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 48h: secure-verify-login.top",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 48h || link:secure-verify-login.top"
+syn-0067,"Hi Maria, Chase: A purchase of $699.00 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Reply STOP to opt out.",sms,legit,legit_bank_alert,
+syn-0068,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $1,284.50 fine online at fastpay-verify.click today to avoid court action.",email,scam,toll_fine,"threat:Traffic violation notice || payment:Pay the $1,284.50 fine online || link:fastpay-verify.click || urgency:today"
+syn-0069,"Subject: Department of Treasury - Final Notice
+
+You owe $149.99 in back taxes. Failure to respond in 24 hours will result in seizure of assets. Pay by Steam gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 24 hours will result in seizure of assets || payment:Pay by Steam gift card
+syn-0070,"Hi, this is Dr. Alvarez's office calling to confirm your appointment Thursday at 4:00 PM. Please call us back at (800) 555-0199 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0071,"Notice: US Bank: Fraud alert - we blocked a suspicious charge of $2,500. If this was you, call the number on the back of your card. Thank you.",sms,legit,legit_bank_alert,
+syn-0072,"Dad, new number, lost my phone. Can you Zelle $35.50 to a friend of mine? Need it in an hour. Have a great day!",sms,scam,family_emergency,payment:Can you Zelle $35.50 || urgency:Need it in an hour
+syn-0073,"Hi Sam, Hi, wrong number? Anyway, my uncle's trading team made me 250% returns in a month with Ethereum. I can show you how, spots are filling fast: chase-secure-alert.co",sms,scam,crypto_investment,"prize:250% returns in a month || urgency:show you how, spots are filling fast || link:chase-secure-alert.co"
+syn-0074,FYI: Your Capital One card ending in 4821 was declined. Reactivate now to avoid fees: usps-redelivery.info,sms,scam,bank_account_locked,urgency:Reactivate now || link:usps-redelivery.info
+syn-0075,You've been chosen for a free iPhone 16! Only 3 left. Take our survey: t-mobile-billing.support,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:t-mobile-billing.support
+syn-0076,"Subject: Your plan is changing
+
+Hi Maria, effective next month your plan price changes. Details at ups.com/track. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0077,T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Have a great day!,sms,legit,legit_carrier,
+syn-0078,This is an automated message from the Wells Fargo fraud department. Your debit card has been compromised. Press 1 immediately to speak with an agent and have your card number and PIN ready.,voicemail,scam,bank_account_locked,threat:compromised || urgency:Press 1 immediately || credential_request:have your card number and PIN ready
+syn-0079,"your carrier Alert: Your bill of $2,500 is overdue and service will be suspended. Pay now at tinyurl.com/y8fz2p.",sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:tinyurl.com/y8fz2p
+syn-0080,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $35.50 via bit.ly/3xK9aQ to release your package.
+
+UPS Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $35.50 || link:bit.ly/3xK9aQ
+syn-0081,G-120404 is your Google verification code. Have a great day!,sms,legit,legit_2fa,
+syn-0082,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $89.00 on your US Bank account. To avoid permanent suspension, verify your identity and card number at irs-refund-claim.net.
+
+US Bank Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $89.00 || credential_request:verify your identity and card number || link:irs-refund-claim.net
+syn-0083,Bank of America: Your one-time passcode is 136291. We will never call or text asking for it. Reply STOP to opt out.,sms,legit,legit_2fa,
+syn-0084,"Subject: Guaranteed 600% returns
+
+Join our exclusive USDT platform. Deposit just $1,284.50 today and double it in 7 days, risk free. Offer ends tonight.",email,scam,crypto_investment,"prize:Guaranteed 600% returns || payment:Deposit just $1,284.50 || prize:double it in 7 days, risk free || urgency:Offer ends tonight"
+syn-0085,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $149.99; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0086,Your Bitcoin wallet has a security issue. Enter your recovery phrase to secure it: usps-redelivery.info,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:usps-redelivery.info
+syn-0087,"IRS: You are owed a tax refund of $1,284.50. Submit your SSN and bank details to claim: irs-refund-claim.net",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:irs-refund-claim.net
+syn-0088,"Subject: Department of Treasury - Final Notice
+
+You owe $35.50 in back taxes. Failure to respond in 48 hours will result in seizure of assets. Pay by Apple gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 48 hours will result in seizure of assets || payment:Pay by Apple gift card
+syn-0089,"Hello, Your login code is 331493. If you didn't request this, you can ignore this message.",sms,legit,legit_2fa,
+syn-0090,"Subject: Appointment confirmation
+
+Hi Sam, this confirms your visit on Friday at 9:30 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0091,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $699.00 via bit.ly/3xK9aQ to release your package.
+
+UPS Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $699.00 || link:bit.ly/3xK9aQ
+syn-0092,"hey it's Carlos! running 10 min late, grab us a table?",sms,legit,legit_friend,
+syn-0093,This is Apple Support. Your iCloud was hacked. Call us now at (469) 555-0171. We will need remote access to your computer.,voicemail,scam,tech_support,impersonation:Apple Support || threat:hacked || urgency:Call us now || credential_request:remote access to your computer
+syn-0094,"Hello, US Bank Alert: Your balance is below $50. Log in using the US Bank app to review. Do not reply with personal info. Reply STOP to opt out.",sms,legit,legit_bank_alert,
+syn-0095,This is Apple Support. Your iCloud was hacked. Call us now at (800) 555-0199. We will need remote access to your computer.,voicemail,scam,tech_support,impersonation:Apple Support || threat:hacked || urgency:Call us now || credential_request:remote access to your computer
+syn-0096,"Norton: Your subscription renewed for $89.00. If you didn't authorize this, call (512) 555-0123 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (512) 555-0123 now
+syn-0097,Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: acct-update-now.xyz,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:acct-update-now.xyz
+syn-0098,"Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Thank you.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0099,FYI: T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Reply STOP to opt out.,sms,legit,legit_carrier,
+syn-0100,"My love, I'm stuck at the airport and my card is blocked. Could you send $149.99 in Apple gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us.",sms,scam,romance,payment:send $149.99 in Apple gift cards || urgency:pay you back the moment I land
+syn-0101,"IRS: You are owed a tax refund of $1,284.50. Submit your SSN and bank details to claim: secure-verify-login.top Reply STOP to opt out.",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:secure-verify-login.top
+syn-0102,"Hello, IRS: You are owed a tax refund of $2,500. Submit your SSN and bank details to claim: bit.ly/3xK9aQ Have a great day!",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:bit.ly/3xK9aQ
+syn-0103,"Subject: Missing you
+
+Darling, I need $35.50 for a plane ticket to finally come see you. Wire it via USDT and keep this just between us.",email,scam,romance,payment:$35.50 for a plane ticket || payment:Wire it via USDT || urgency:just between us
+syn-0104,"Wells Fargo: Fraud alert - we blocked a suspicious charge of $699.00. If this was you, call the number on the back of your card. Have a great day!",sms,legit,legit_bank_alert,
+syn-0105,USPS: Your package 5950639273 could not be delivered. Pay a $1.99 redelivery fee at secure-verify-login.top within 24h or it will be returned. Reply STOP to opt out.,sms,scam,package_delivery,impersonation:USPS || payment:Pay a $1.99 redelivery fee || link:secure-verify-login.top || urgency:within 24h
+syn-0106,Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: chase-secure-alert.co Msg&data rates may apply.,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:chase-secure-alert.co
+syn-0107,UPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: irs-refund-claim.net,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:irs-refund-claim.net
+syn-0108,"T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 12h: chase-secure-alert.co Have a great day!",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 12h || link:chase-secure-alert.co"
+syn-0109,Notice: your carrier: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Have a great day!,sms,legit,legit_carrier,
+syn-0110,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at fastpay-verify.click within 2 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:fastpay-verify.click
+syn-0111,"Hello, Your login code is 723795. If you didn't request this, you can ignore this message.",sms,legit,legit_2fa,
+syn-0112,FedEx: Delivered. Your package was left at the front door at 4:00 PM.,sms,legit,legit_delivery,
+syn-0113,"Subject: Appointment confirmation
+
+Hi Carlos, this confirms your visit on Tuesday at 4:00 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0114,"Subject: Your plan is changing
+
+Hi Linda, effective next month your plan price changes. Details at chase.com. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0115,"Notice: Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0116,"Notice: hey it's Carlos! running 10 min late, grab us a table? Reply STOP to opt out.",sms,legit,legit_friend,
+syn-0117,"Subject: Appointment confirmation
+
+Hi Priya, this confirms your visit on Thursday at 4:00 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0118,"Hi, this is Dr. Nguyen's office calling to confirm your appointment Tuesday at 11:45 AM. Please call us back at (972) 555-0142 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0119,"Hello, Norton: Your subscription renewed for $2,500. If you didn't authorize this, call (214) 555-0188 now for a refund. Have a great day!",sms,scam,tech_support,impersonation:Norton || urgency:call (214) 555-0188 now
+syn-0120,"FYI: Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Thank you.",sms,legit,legit_friend,
+syn-0121,"Part-time data entry job, $35/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$35/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0122,US Bank Alert: Your balance is below $50. Log in using the US Bank app to review. Do not reply with personal info. Have a great day!,sms,legit,legit_bank_alert,
+syn-0123,FYI: You've been chosen for a free iPhone 16! Only 3 left. Take our survey: chase-secure-alert.co Reply STOP to opt out.,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:chase-secure-alert.co
+syn-0124,"Part-time data entry job, $22/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Reply STOP to opt out.",sms,scam,job_offer,"payment:$22/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0125,"Hi Emily, Hi Emily! We found your resume. Earn $35/hr working from home, no experience needed. Limited spots. Text back to start: t-mobile-billing.support",sms,scam,job_offer,payment:Earn $35/hr working from home || urgency:Limited spots || link:t-mobile-billing.support
+syn-0126,"Subject: Your computer is infected
+
+Microsoft Security detected a virus on your device. Call immediately: (972) 555-0142. Do not turn off your computer.",email,scam,tech_support,threat:Your computer is infected || impersonation:Microsoft Security || threat:a virus on your device || urgency:Call immediately
+syn-0127,DHL Delivery Alert: a package requires a signature. Reply with a time window or reschedule at fedex.com/track.,sms,legit,legit_delivery,
+syn-0128,Notice: Wells Fargo Alert: Your account has been temporarily locked due to suspicious activity. Verify within 48 hours or it will be closed: t-mobile-billing.support Have a great day!,sms,scam,bank_account_locked,impersonation:Wells Fargo Alert || threat:temporarily locked || urgency:Verify within 48 hours || link:t-mobile-billing.support
+syn-0129,"IRS: You are owed a tax refund of $2,500. Submit your SSN and bank details to claim: bit.ly/3xK9aQ",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:bit.ly/3xK9aQ
+syn-0130,UPS: Your package 3852560339 could not be delivered. Pay a $1.99 redelivery fee at t-mobile-billing.support within 24h or it will be returned.,sms,scam,package_delivery,impersonation:UPS || payment:Pay a $1.99 redelivery fee || link:t-mobile-billing.support || urgency:within 24h
+syn-0131,"Hello, IRS: You are owed a tax refund of $2,500. Submit your SSN and bank details to claim: chase-secure-alert.co Thank you.",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:chase-secure-alert.co
+syn-0132,FYI: IRS: You are owed a tax refund of $699.00. Submit your SSN and bank details to claim: usps-redelivery.info Reply STOP to opt out.,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:usps-redelivery.info
+syn-0133,"Hello, Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Apple gift cards? Thank you.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Apple gift cards"
+syn-0134,"Notice: Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Google Play gift cards? Msg&data rates may apply.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Google Play gift cards"
+syn-0135,Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: track-parcel-now.cc Thank you.,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:track-parcel-now.cc
+syn-0136,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $35.50 via t-mobile-billing.support to release your package.
+
+DHL Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $35.50 || link:t-mobile-billing.support
+syn-0137,"Notice: T-Mobile: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit usps-redelivery.info immediately. Thank you.",sms,scam,carrier_sim_swap,impersonation:T-Mobile || credential_request:reply with your account PIN || link:usps-redelivery.info || urgency:immediately
+syn-0138,"Hi, this is Dr. Brooks's office calling to confirm your appointment Tuesday at 9:30 AM. Please call us back at (469) 555-0171 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0139,"Hello, My love, I'm stuck at the airport and my card is blocked. Could you send $1,284.50 in Target gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Msg&data rates may apply.",sms,scam,romance,"payment:send $1,284.50 in Target gift cards || urgency:pay you back the moment I land"
+syn-0140,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Google Play gift cards? Reply STOP to opt out.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Google Play gift cards"
+syn-0141,"FYI: Chase: Unusual sign-in from Plano. If this wasn't you, confirm your login and PIN here: irs-refund-claim.net Have a great day!",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:irs-refund-claim.net
+syn-0142,FYI: UPS Delivery Alert: a package requires a signature. Reply with a time window or reschedule at fedex.com/track.,sms,legit,legit_delivery,
+syn-0143,"Subject: Your plan is changing
+
+Hi Linda, effective next month your plan price changes. Details at fedex.com/track. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0144,FYI: Wells Fargo: A purchase of $412.37 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Thank you.,sms,legit,legit_bank_alert,
+syn-0145,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $699.00; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0146,"Hello, NTTA: You have an unpaid toll balance of $35.50. Late fees will apply after today. Pay now: irs-refund-claim.net",sms,scam,toll_fine,threat:unpaid toll balance of $35.50 || threat:Late fees will apply || payment:Pay now || link:irs-refund-claim.net
+syn-0147,Notice: Capital One: A purchase of $412.37 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Reply STOP to opt out.,sms,legit,legit_bank_alert,
+syn-0148,"Notice: Dad, new number, lost my phone. Can you Zelle $699.00 to a friend of mine? Need it in an hour. Have a great day!",sms,scam,family_emergency,payment:Can you Zelle $699.00 || urgency:Need it in an hour
+syn-0149,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $412.37 on your Chase account. To avoid permanent suspension, verify your identity and card number at secure-verify-login.top.
+
+Chase Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $412.37 || credential_request:verify your identity and card number || link:secure-verify-login.top
+syn-0150,FYI: FedEx: Your package 2692942676 is out for delivery today. Track at usps.com/tracking. Thank you.,sms,legit,legit_delivery,
+syn-0151,"Hello, this is UPS. We have a package held for you. A small fee is required to release it. Call back right away at (972) 555-0142 or it will be destroyed.",voicemail,scam,package_delivery,payment:A small fee is required || urgency:Call back right away
+syn-0152,Notice: G-336815 is your Google verification code.,sms,legit,legit_2fa,
+syn-0153,"Subject: Appointment confirmation
+
+Hi Aisha, this confirms your visit on Monday at 2:15 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0154,"Notice: Dad, new number, lost my phone. Can you Zelle $89.00 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,payment:Can you Zelle $89.00 || urgency:Need it in an hour
+syn-0155,"Subject: Department of Treasury - Final Notice
+
+You owe $1,284.50 in back taxes. Failure to respond in 2 hours will result in seizure of assets. Pay by Apple gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 2 hours will result in seizure of assets || payment:Pay by Apple gift card
+syn-0156,FedEx Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: tinyurl.com/y8fz2p,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:tinyurl.com/y8fz2p
+syn-0157,"Hi, wrong number? Anyway, my uncle's trading team made me 250% returns in a month with USDT. I can show you how, spots are filling fast: chase-secure-alert.co Have a great day!",sms,scam,crypto_investment,"prize:250% returns in a month || urgency:show you how, spots are filling fast || link:chase-secure-alert.co"
+syn-0158,"Notice: Urgent!! forgot my keys, can you let me in? I'm outside",sms,legit,legit_friend,
+syn-0159,Your your carrier verification code is 632390. It expires in 10 minutes. Never share this code with anyone. Have a great day!,sms,legit,legit_2fa,
+syn-0160,"Mom here, this is my new work number so save it. Call me when you get a chance, no rush.",sms,legit,legit_friend,
+syn-0161,"Hello, Capital One: Fraud alert - we blocked a suspicious charge of $699.00. If this was you, call the number on the back of your card.",sms,legit,legit_bank_alert,
+syn-0162,"Subject: Your statement is ready
+
+Your monthly statement is available in the Chase app. For your security we never include links asking you to sign in.",email,legit,legit_bank_alert,
+syn-0163,Your T-Mobile verification code is 654034. It expires in 10 minutes. Never share this code with anyone.,sms,legit,legit_2fa,
+syn-0164,"Subject: Appointment confirmation
+
+Hi Maria, this confirms your visit on Thursday at 2:15 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0165,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $35.50 on your Citi account. To avoid permanent suspension, verify your identity and card number at usps-redelivery.info.
+
+Citi Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $35.50 || credential_request:verify your identity and card number || link:usps-redelivery.info
+syn-0166,"Subject: Guaranteed 600% returns
+
+Join our exclusive Bitcoin platform. Deposit just $2,500 today and double it in 7 days, risk free. Offer ends tonight.",email,scam,crypto_investment,"prize:Guaranteed 600% returns || payment:Deposit just $2,500 || prize:double it in 7 days, risk free || urgency:Offer ends tonight"
+syn-0167,"Hi Maria, Norton: Your subscription renewed for $1,284.50. If you didn't authorize this, call (469) 555-0171 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (469) 555-0171 now
+syn-0168,"Hi Sam, Hi Sam! We found your resume. Earn $35/hr working from home, no experience needed. Limited spots. Text back to start: fastpay-verify.click Thank you.",sms,scam,job_offer,payment:Earn $35/hr working from home || urgency:Limited spots || link:fastpay-verify.click
+syn-0169,FYI: Did you see the game last night?? unreal. Dinner Thursday?,sms,legit,legit_friend,
+syn-0170,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $2,500; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0171,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($89.00). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0172,FedEx: Your package 5687313118 is out for delivery today. Track at t-mobile.com/myaccount. Msg&data rates may apply.,sms,legit,legit_delivery,
+syn-0173,UPS: Your package 1617938716 is out for delivery today. Track at ups.com/track. Msg&data rates may apply.,sms,legit,legit_delivery,
+syn-0174,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $149.99 fine online at fastpay-verify.click today to avoid court action.",email,scam,toll_fine,threat:Traffic violation notice || payment:Pay the $149.99 fine online || link:fastpay-verify.click || urgency:today
+syn-0175,"Subject: Your order has shipped
+
+Hi Sam, your order shipped and should arrive Thursday. Track it anytime at t-mobile.com/myaccount. No action needed.",email,legit,legit_delivery,
+syn-0176,"Subject: Appointment confirmation
+
+Hi Maria, this confirms your visit on Tuesday at 11:45 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0177,This is an automated message from the Capital One fraud department. Your debit card has been compromised. Press 1 immediately to speak with an agent and have your card number and PIN ready.,voicemail,scam,bank_account_locked,threat:compromised || urgency:Press 1 immediately || credential_request:have your card number and PIN ready
+syn-0178,"Hi Priya, Citi: Your one-time passcode is 519408. We will never call or text asking for it.",sms,legit,legit_2fa,
+syn-0179,"FYI: Your login code is 650510. If you didn't request this, you can ignore this message.",sms,legit,legit_2fa,
+syn-0180,"Hi Jake, Did you see the game last night?? unreal. Dinner Monday?",sms,legit,legit_friend,
+syn-0181,"Hi Priya, Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: tinyurl.com/y8fz2p",sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:tinyurl.com/y8fz2p
+syn-0182,"Hello, this is USPS. We have a package held for you. A small fee is required to release it. Call back right away at (469) 555-0171 or it will be destroyed.",voicemail,scam,package_delivery,payment:A small fee is required || urgency:Call back right away
+syn-0183,"Hi Tom, Citi: Fraud alert - we blocked a suspicious charge of $35.50. If this was you, call the number on the back of your card.",sms,legit,legit_bank_alert,
+syn-0184,"US Bank: A purchase of $1,284.50 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Msg&data rates may apply.",sms,legit,legit_bank_alert,
+syn-0185,"Hi Linda! We found your resume. Earn $35/hr working from home, no experience needed. Limited spots. Text back to start: bit.ly/3xK9aQ Have a great day!",sms,scam,job_offer,payment:Earn $35/hr working from home || urgency:Limited spots || link:bit.ly/3xK9aQ
+syn-0186,"Subject: Your plan is changing
+
+Hi Carlos, effective next month your plan price changes. Details at fedex.com/track. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0187,You've been chosen for a free iPhone 16! Only 3 left. Take our survey: irs-refund-claim.net,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:irs-refund-claim.net
+syn-0188,"My love, I'm stuck at the airport and my card is blocked. Could you send $89.00 in Apple gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us.",sms,scam,romance,payment:send $89.00 in Apple gift cards || urgency:pay you back the moment I land
+syn-0189,"Hello, FedEx Delivery Alert: a package requires a signature. Reply with a time window or reschedule at t-mobile.com/myaccount.",sms,legit,legit_delivery,
+syn-0190,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at t-mobile-billing.support within 12 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:t-mobile-billing.support
+syn-0191,FYI: FedEx: Your package 6817826569 could not be delivered. Pay a $1.99 redelivery fee at bit.ly/3xK9aQ within 24h or it will be returned.,sms,scam,package_delivery,impersonation:FedEx || payment:Pay a $1.99 redelivery fee || link:bit.ly/3xK9aQ || urgency:within 24h
+syn-0192,"Subject: Your plan is changing
+
+Hi Priya, effective next month your plan price changes. Details at ups.com/track. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0193,"hey it's Emily! running 10 min late, grab us a table?",sms,legit,legit_friend,
+syn-0194,"FYI: T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: chase-secure-alert.co Msg&data rates may apply.",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 2h || link:chase-secure-alert.co"
+syn-0195,"Urgent!! forgot my keys, can you let me in? I'm outside",sms,legit,legit_friend,
+syn-0196,"Notice: Norton: Your subscription renewed for $35.50. If you didn't authorize this, call (469) 555-0171 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (469) 555-0171 now
+syn-0197,"My love, I'm stuck at the airport and my card is blocked. Could you send $1,284.50 in Apple gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us.",sms,scam,romance,"payment:send $1,284.50 in Apple gift cards || urgency:pay you back the moment I land"
+syn-0198,"Norton: Your subscription renewed for $1,284.50. If you didn't authorize this, call (972) 555-0142 now for a refund. Reply STOP to opt out.",sms,scam,tech_support,impersonation:Norton || urgency:call (972) 555-0142 now
+syn-0199,Your T-Mobile verification code is 602891. It expires in 10 minutes. Never share this code with anyone.,sms,legit,legit_2fa,
+syn-0200,G-390524 is your Google verification code. Have a great day!,sms,legit,legit_2fa,
+syn-0201,"Hi Dave, Hi, it's Dave from book club. Can you send me $412.37? Just your share of the tickets, Venmo is fine, I'll see you Tuesday too. Msg&data rates may apply.",sms,legit,legit_friend,
+syn-0202,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $35.50 via cutt.ly/Rq7vPz to release your package.
+
+FedEx Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $35.50 || link:cutt.ly/Rq7vPz
+syn-0203,"Hello, Your Windows license has expired. Renew now at track-parcel-now.cc to avoid data loss.",sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:track-parcel-now.cc
+syn-0204,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at cutt.ly/Rq7vPz within 12 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:cutt.ly/Rq7vPz
+syn-0205,"Subject: Appointment confirmation
+
+Hi Tom, this confirms your visit on Monday at 4:00 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0206,"FYI: Hi, it's Carlos from book club. Can you send me $1,284.50? Just your share of the tickets, Venmo is fine, I'll see you Tuesday too. Reply STOP to opt out.",sms,legit,legit_friend,
+syn-0207,UPS: Your package 5953677572 is out for delivery today. Track at chase.com. Thank you.,sms,legit,legit_delivery,
+syn-0208,Your Windows license has expired. Renew now at usps-redelivery.info to avoid data loss. Have a great day!,sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:usps-redelivery.info
+syn-0209,This is the Internal Revenue Service. A warrant has been issued for your arrest over unpaid taxes. Call back immediately at (800) 555-0199. Payment by gift card or wire is accepted.,voicemail,scam,irs_government,impersonation:Internal Revenue Service || threat:warrant has been issued for your arrest || urgency:Call back immediately || payment:Payment by gift card or wire is accepted
+syn-0210,FYI: Reminder: you have an appointment with Dr. Alvarez on Monday at 11:45 AM. Reply C to confirm or call the office to reschedule.,sms,legit,legit_appointment,
+syn-0211,"My love, I'm stuck at the airport and my card is blocked. Could you send $699.00 in Target gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us.",sms,scam,romance,payment:send $699.00 in Target gift cards || urgency:pay you back the moment I land
+syn-0212,T-Mobile: Your bill of $89.00 is ready and will autopay on the 15th. View it in the T-Life app. Msg&data rates may apply.,sms,legit,legit_carrier,
+syn-0213,"FYI: Norton: Your subscription renewed for $89.00. If you didn't authorize this, call (800) 555-0199 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (800) 555-0199 now
+syn-0214,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $699.00 on your Chase account. To avoid permanent suspension, verify your identity and card number at bit.ly/3xK9aQ.
+
+Chase Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $699.00 || credential_request:verify your identity and card number || link:bit.ly/3xK9aQ
+syn-0215,FYI: your carrier: You've used 80% of your high-speed data. Manage your plan in the T-Life app.,sms,legit,legit_carrier,
+syn-0216,your carrier: Your bill of $35.50 is ready and will autopay on the 15th. View it in the T-Life app. Msg&data rates may apply.,sms,legit,legit_carrier,
+syn-0217,"Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Have a great day!",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0218,"Hello, Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0219,"Hi Carlos, Your T-Mobile verification code is 241389. It expires in 10 minutes. Never share this code with anyone. Thank you.",sms,legit,legit_2fa,
+syn-0220,"Hi Emily, Hi Emily! We found your resume. Earn $22/hr working from home, no experience needed. Limited spots. Text back to start: cutt.ly/Rq7vPz Thank you.",sms,scam,job_offer,payment:Earn $22/hr working from home || urgency:Limited spots || link:cutt.ly/Rq7vPz
+syn-0221,FYI: your carrier Alert: Your bill of $89.00 is overdue and service will be suspended. Pay now at acct-update-now.xyz.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:acct-update-now.xyz
+syn-0222,"FYI: T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 24h: fastpay-verify.click Have a great day!",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 24h || link:fastpay-verify.click"
+syn-0223,Notice: Citi Alert: Your account has been temporarily locked due to suspicious activity. Verify within 12 hours or it will be closed: tinyurl.com/y8fz2p,sms,scam,bank_account_locked,impersonation:Citi Alert || threat:temporarily locked || urgency:Verify within 12 hours || link:tinyurl.com/y8fz2p
+syn-0224,"Hi Linda, T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Msg&data rates may apply.",sms,legit,legit_carrier,
+syn-0225,"hey it's Tom! running 10 min late, grab us a table? Thank you.",sms,legit,legit_friend,
+syn-0226,"Subject: Your order has shipped
+
+Hi Emily, your order shipped and should arrive Thursday. Track it anytime at usps.com/tracking. No action needed.",email,legit,legit_delivery,
+syn-0227,"Dad, new number, lost my phone. Can you Zelle $2,500 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,"payment:Can you Zelle $2,500 || urgency:Need it in an hour"
+syn-0228,"Subject: Department of Treasury - Final Notice
+
+You owe $89.00 in back taxes. Failure to respond in 2 hours will result in seizure of assets. Pay by Target gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 2 hours will result in seizure of assets || payment:Pay by Target gift card
+syn-0229,"Subject: Your computer is infected
+
+Microsoft Security detected a virus on your device. Call immediately: (800) 555-0199. Do not turn off your computer.",email,scam,tech_support,threat:Your computer is infected || impersonation:Microsoft Security || threat:a virus on your device || urgency:Call immediately
+syn-0230,"Subject: Your computer is infected
+
+Microsoft Security detected a virus on your device. Call immediately: (469) 555-0171. Do not turn off your computer.",email,scam,tech_support,threat:Your computer is infected || impersonation:Microsoft Security || threat:a virus on your device || urgency:Call immediately
+syn-0231,Your Chase card ending in 4821 was declined. Reactivate now to avoid fees: tinyurl.com/y8fz2p Msg&data rates may apply.,sms,scam,bank_account_locked,urgency:Reactivate now || link:tinyurl.com/y8fz2p
+syn-0232,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $35.50 fine online at cutt.ly/Rq7vPz today to avoid court action.",email,scam,toll_fine,threat:Traffic violation notice || payment:Pay the $35.50 fine online || link:cutt.ly/Rq7vPz || urgency:today
+syn-0233,"Subject: Your plan is changing
+
+Hi Dave, effective next month your plan price changes. Details at fedex.com/track. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0234,"Hi Maria, Hi Maria! We found your resume. Earn $22/hr working from home, no experience needed. Limited spots. Text back to start: acct-update-now.xyz",sms,scam,job_offer,payment:Earn $22/hr working from home || urgency:Limited spots || link:acct-update-now.xyz
+syn-0235,"Hello, Hi, wrong number? Anyway, my uncle's trading team made me 180% returns in a month with Bitcoin. I can show you how, spots are filling fast: t-mobile-billing.support Msg&data rates may apply.",sms,scam,crypto_investment,"prize:180% returns in a month || urgency:show you how, spots are filling fast || link:t-mobile-billing.support"
+syn-0236,Notice: Wells Fargo Alert: Your balance is below $50. Log in using the Wells Fargo app to review. Do not reply with personal info.,sms,legit,legit_bank_alert,
+syn-0237,"Norton: Your subscription renewed for $35.50. If you didn't authorize this, call (972) 555-0142 now for a refund. Have a great day!",sms,scam,tech_support,impersonation:Norton || urgency:call (972) 555-0142 now
+syn-0238,"FYI: Hi Mom, this is my new number. My phone broke. Can you send $1,284.50 for a bill I need to pay today? It's urgent, I'll explain later. Thank you.",sms,scam,family_emergency,"impersonation:this is my new number || payment:send $1,284.50 for a bill I need to pay today || urgency:It's urgent"
+syn-0239,"Subject: Your order has shipped
+
+Hi Aisha, your order shipped and should arrive Thursday. Track it anytime at t-mobile.com/myaccount. No action needed.",email,legit,legit_delivery,
+syn-0240,"Hello, UPS: Delivered. Your package was left at the front door at 4:00 PM. Msg&data rates may apply.",sms,legit,legit_delivery,
+syn-0241,"Hi Aisha! We found your resume. Earn $35/hr working from home, no experience needed. Limited spots. Text back to start: usps-redelivery.info",sms,scam,job_offer,payment:Earn $35/hr working from home || urgency:Limited spots || link:usps-redelivery.info
+syn-0242,"Hi, wrong number? Anyway, my uncle's trading team made me 250% returns in a month with Ethereum. I can show you how, spots are filling fast: bit.ly/3xK9aQ",sms,scam,crypto_investment,"prize:250% returns in a month || urgency:show you how, spots are filling fast || link:bit.ly/3xK9aQ"
+syn-0243,"Hi, it's me... I had an accident and I'm in the hospital. My phone is dead, I'm using someone else's. I need money wired right now. Please don't call anyone yet.",voicemail,scam,family_emergency,threat:had an accident || threat:in the hospital || payment:need money wired right now || urgency:Please don't call anyone yet
+syn-0244,"FYI: Hi, wrong number? Anyway, my uncle's trading team made me 250% returns in a month with Bitcoin. I can show you how, spots are filling fast: usps-redelivery.info",sms,scam,crypto_investment,"prize:250% returns in a month || urgency:show you how, spots are filling fast || link:usps-redelivery.info"
+syn-0245,Did you see the game last night?? unreal. Dinner Friday?,sms,legit,legit_friend,
+syn-0246,"Hi, this is Dr. Nguyen's office calling to confirm your appointment Friday at 9:30 AM. Please call us back at (800) 555-0199 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0247,"Hi Emily, Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0248,"Subject: Missing you
+
+Darling, I need $2,500 for a plane ticket to finally come see you. Wire it via USDT and keep this just between us.",email,scam,romance,"payment:$2,500 for a plane ticket || payment:Wire it via USDT || urgency:just between us"
+syn-0249,"NTTA: You have an unpaid toll balance of $2,500. Late fees will apply after today. Pay now: acct-update-now.xyz Have a great day!",sms,scam,toll_fine,"threat:unpaid toll balance of $2,500 || threat:Late fees will apply || payment:Pay now || link:acct-update-now.xyz"
+syn-0250,your carrier: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Have a great day!,sms,legit,legit_carrier,
+syn-0251,"Hello, Reminder: you have an appointment with Dr. Alvarez on Tuesday at 11:45 AM. Reply C to confirm or call the office to reschedule. Have a great day!",sms,legit,legit_appointment,
+syn-0252,"FYI: Hi Sam, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0253,"T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 12h: track-parcel-now.cc Thank you.",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 12h || link:track-parcel-now.cc"
+syn-0254,"Subject: Guaranteed 180% returns
+
+Join our exclusive Bitcoin platform. Deposit just $89.00 today and double it in 7 days, risk free. Offer ends tonight.",email,scam,crypto_investment,"prize:Guaranteed 180% returns || payment:Deposit just $89.00 || prize:double it in 7 days, risk free || urgency:Offer ends tonight"
+syn-0255,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at irs-refund-claim.net within 24 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:irs-refund-claim.net
+syn-0256,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Apple gift cards? Thank you.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Apple gift cards"
+syn-0257,"Hello, T-Mobile Alert: Your bill of $2,500 is overdue and service will be suspended. Pay now at bit.ly/3xK9aQ. Reply STOP to opt out.",sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:bit.ly/3xK9aQ
+syn-0258,"Hello, Bank of America: Your one-time passcode is 322576. We will never call or text asking for it. Have a great day!",sms,legit,legit_2fa,
+syn-0259,FYI: Chase Alert: Your balance is below $50. Log in using the Chase app to review. Do not reply with personal info. Have a great day!,sms,legit,legit_bank_alert,
+syn-0260,"Notice: Hi, it's Jake from book club. Can you send me $149.99? Just your share of the tickets, Venmo is fine, I'll see you Thursday too. Have a great day!",sms,legit,legit_friend,
+syn-0261,"FYI: Citi: Unusual sign-in from Houston. If this wasn't you, confirm your login and PIN here: fastpay-verify.click Msg&data rates may apply.",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:fastpay-verify.click
+syn-0262,"Hello, Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: chase-secure-alert.co Msg&data rates may apply.",sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:chase-secure-alert.co
+syn-0263,"Hello, Your Wells Fargo card ending in 4821 was declined. Reactivate now to avoid fees: cutt.ly/Rq7vPz",sms,scam,bank_account_locked,urgency:Reactivate now || link:cutt.ly/Rq7vPz
+syn-0264,Your your carrier verification code is 941637. It expires in 10 minutes. Never share this code with anyone.,sms,legit,legit_2fa,
+syn-0265,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $1,284.50; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0266,"Hello, Hi, wrong number? Anyway, my uncle's trading team made me 600% returns in a month with USDT. I can show you how, spots are filling fast: tinyurl.com/y8fz2p",sms,scam,crypto_investment,"prize:600% returns in a month || urgency:show you how, spots are filling fast || link:tinyurl.com/y8fz2p"
+syn-0267,Reminder: you have an appointment with Dr. Brooks on Friday at 11:45 AM. Reply C to confirm or call the office to reschedule.,sms,legit,legit_appointment,
+syn-0268,"Subject: Appointment confirmation
+
+Hi Dave, this confirms your visit on Tuesday at 9:30 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0269,T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app. Msg&data rates may apply.,sms,legit,legit_carrier,
+syn-0270,"FYI: your carrier Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: cutt.ly/Rq7vPz",sms,scam,prize_lottery,"impersonation:your carrier || prize:won a $1,000 gift card || urgency:Claim in 2h || link:cutt.ly/Rq7vPz"
+syn-0271,"Subject: Your computer is infected
+
+Microsoft Security detected a virus on your device. Call immediately: (214) 555-0188. Do not turn off your computer.",email,scam,tech_support,threat:Your computer is infected || impersonation:Microsoft Security || threat:a virus on your device || urgency:Call immediately
+syn-0272,"Hello, this is FedEx. We have a package held for you. A small fee is required to release it. Call back right away at (469) 555-0171 or it will be destroyed.",voicemail,scam,package_delivery,payment:A small fee is required || urgency:Call back right away
+syn-0273,You've been chosen for a free iPhone 16! Only 3 left. Take our survey: chase-secure-alert.co,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:chase-secure-alert.co
+syn-0274,"Hello, this is UPS. We have a package held for you. A small fee is required to release it. Call back right away at (800) 555-0199 or it will be destroyed.",voicemail,scam,package_delivery,payment:A small fee is required || urgency:Call back right away
+syn-0275,"Hi, it's Linda from book club. Can you send me $1,284.50? Just your share of the tickets, Venmo is fine, I'll see you Monday too.",sms,legit,legit_friend,
+syn-0276,Your your carrier verification code is 701095. It expires in 10 minutes. Never share this code with anyone. Reply STOP to opt out.,sms,legit,legit_2fa,
+syn-0277,Notice: your carrier: Your bill of $412.37 is ready and will autopay on the 15th. View it in the T-Life app. Have a great day!,sms,legit,legit_carrier,
+syn-0278,Notice: You've been chosen for a free iPhone 16! Only 3 left. Take our survey: irs-refund-claim.net Have a great day!,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:irs-refund-claim.net
+syn-0279,"Subject: Guaranteed 600% returns
+
+Join our exclusive USDT platform. Deposit just $149.99 today and double it in 7 days, risk free. Offer ends tonight.",email,scam,crypto_investment,"prize:Guaranteed 600% returns || payment:Deposit just $149.99 || prize:double it in 7 days, risk free || urgency:Offer ends tonight"
+syn-0280,Chase: A purchase of $35.50 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN.,sms,legit,legit_bank_alert,
+syn-0281,NTTA: You have an unpaid toll balance of $149.99. Late fees will apply after today. Pay now: cutt.ly/Rq7vPz Have a great day!,sms,scam,toll_fine,threat:unpaid toll balance of $149.99 || threat:Late fees will apply || payment:Pay now || link:cutt.ly/Rq7vPz
+syn-0282,Notice: Reminder: you have an appointment with Dr. Brooks on Thursday at 11:45 AM. Reply C to confirm or call the office to reschedule.,sms,legit,legit_appointment,
+syn-0283,This is T-Mobile security. We noticed someone trying to port your number. Please say your account PIN and last four of your SSN to cancel the request.,voicemail,scam,carrier_sim_swap,threat:someone trying to port your number || credential_request:Please say your account PIN and last four of your SSN
+syn-0284,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Steam gift cards?",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Steam gift cards"
+syn-0285,NTTA: You have an unpaid toll balance of $699.00. Late fees will apply after today. Pay now: irs-refund-claim.net,sms,scam,toll_fine,threat:unpaid toll balance of $699.00 || threat:Late fees will apply || payment:Pay now || link:irs-refund-claim.net
+syn-0286,Citi Alert: Your balance is below $50. Log in using the Citi app to review. Do not reply with personal info.,sms,legit,legit_bank_alert,
+syn-0287,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $412.37 on your Capital One account. To avoid permanent suspension, verify your identity and card number at track-parcel-now.cc.
+
+Capital One Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $412.37 || credential_request:verify your identity and card number || link:track-parcel-now.cc
+syn-0288,"My love, I'm stuck at the airport and my card is blocked. Could you send $1,284.50 in Target gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Reply STOP to opt out.",sms,scam,romance,"payment:send $1,284.50 in Target gift cards || urgency:pay you back the moment I land"
+syn-0289,"FYI: Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Target gift cards?",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Target gift cards"
+syn-0290,"Hello, USPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: acct-update-now.xyz",sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:acct-update-now.xyz
+syn-0291,Notice: Wells Fargo Alert: Your account has been temporarily locked due to suspicious activity. Verify within 24 hours or it will be closed: chase-secure-alert.co Have a great day!,sms,scam,bank_account_locked,impersonation:Wells Fargo Alert || threat:temporarily locked || urgency:Verify within 24 hours || link:chase-secure-alert.co
+syn-0292,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $35.50 fine online at fastpay-verify.click today to avoid court action.",email,scam,toll_fine,threat:Traffic violation notice || payment:Pay the $35.50 fine online || link:fastpay-verify.click || urgency:today
+syn-0293,"Hi Aisha, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal. Thank you.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0294,This is an automated message from the US Bank fraud department. Your debit card has been compromised. Press 1 immediately to speak with an agent and have your card number and PIN ready.,voicemail,scam,bank_account_locked,threat:compromised || urgency:Press 1 immediately || credential_request:have your card number and PIN ready
+syn-0295,"Hi Mom, this is my new number. My phone broke. Can you send $699.00 for a bill I need to pay today? It's urgent, I'll explain later.",sms,scam,family_emergency,impersonation:this is my new number || payment:send $699.00 for a bill I need to pay today || urgency:It's urgent
+syn-0296,"Notice: hey it's Jake! running 10 min late, grab us a table? Msg&data rates may apply.",sms,legit,legit_friend,
+syn-0297,Notice: Bank of America Alert: Your balance is below $50. Log in using the Bank of America app to review. Do not reply with personal info. Thank you.,sms,legit,legit_bank_alert,
+syn-0298,"FYI: T-Mobile: Your bill of $2,500 is ready and will autopay on the 15th. View it in the T-Life app. Msg&data rates may apply.",sms,legit,legit_carrier,
+syn-0299,"your carrier: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit acct-update-now.xyz immediately.",sms,scam,carrier_sim_swap,impersonation:your carrier || credential_request:reply with your account PIN || link:acct-update-now.xyz || urgency:immediately
+syn-0300,"Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0301,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $89.00 fine online at usps-redelivery.info today to avoid court action.",email,scam,toll_fine,threat:Traffic violation notice || payment:Pay the $89.00 fine online || link:usps-redelivery.info || urgency:today
+syn-0302,"Hi Carlos, Your Windows license has expired. Renew now at fastpay-verify.click to avoid data loss.",sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:fastpay-verify.click
+syn-0303,Notice: DHL: Your package 2231524430 could not be delivered. Pay a $1.99 redelivery fee at bit.ly/3xK9aQ within 24h or it will be returned.,sms,scam,package_delivery,impersonation:DHL || payment:Pay a $1.99 redelivery fee || link:bit.ly/3xK9aQ || urgency:within 24h
+syn-0304,This is the Internal Revenue Service. A warrant has been issued for your arrest over unpaid taxes. Call back immediately at (972) 555-0142. Payment by gift card or wire is accepted.,voicemail,scam,irs_government,impersonation:Internal Revenue Service || threat:warrant has been issued for your arrest || urgency:Call back immediately || payment:Payment by gift card or wire is accepted
+syn-0305,Notice: IRS: You are owed a tax refund of $699.00. Submit your SSN and bank details to claim: tinyurl.com/y8fz2p,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:tinyurl.com/y8fz2p
+syn-0306,"Subject: Your order has shipped
+
+Hi Priya, your order shipped and should arrive Tuesday. Track it anytime at chase.com. No action needed.",email,legit,legit_delivery,
+syn-0307,"Hello, NTTA: You have an unpaid toll balance of $35.50. Late fees will apply after today. Pay now: acct-update-now.xyz",sms,scam,toll_fine,threat:unpaid toll balance of $35.50 || threat:Late fees will apply || payment:Pay now || link:acct-update-now.xyz
+syn-0308,"Norton: Your subscription renewed for $1,284.50. If you didn't authorize this, call (469) 555-0171 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (469) 555-0171 now
+syn-0309,"Hello, Hi Mom, this is my new number. My phone broke. Can you send $149.99 for a bill I need to pay today? It's urgent, I'll explain later.",sms,scam,family_emergency,impersonation:this is my new number || payment:send $149.99 for a bill I need to pay today || urgency:It's urgent
+syn-0310,"Hello, T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app.",sms,legit,legit_carrier,
+syn-0311,Notice: Wells Fargo Alert: Your account has been temporarily locked due to suspicious activity. Verify within 24 hours or it will be closed: track-parcel-now.cc,sms,scam,bank_account_locked,impersonation:Wells Fargo Alert || threat:temporarily locked || urgency:Verify within 24 hours || link:track-parcel-now.cc
+syn-0312,"Notice: T-Mobile: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit irs-refund-claim.net immediately. Reply STOP to opt out.",sms,scam,carrier_sim_swap,impersonation:T-Mobile || credential_request:reply with your account PIN || link:irs-refund-claim.net || urgency:immediately
+syn-0313,"Hi Priya, Norton: Your subscription renewed for $2,500. If you didn't authorize this, call (800) 555-0199 now for a refund. Thank you.",sms,scam,tech_support,impersonation:Norton || urgency:call (800) 555-0199 now
+syn-0314,FedEx: Your package 7626722344 is out for delivery today. Track at chase.com.,sms,legit,legit_delivery,
+syn-0315,your carrier Alert: Your bill of $149.99 is overdue and service will be suspended. Pay now at chase-secure-alert.co.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:chase-secure-alert.co
+syn-0316,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at chase-secure-alert.co within 2 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:chase-secure-alert.co
+syn-0317,"Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Have a great day!",sms,legit,legit_friend,
+syn-0318,"Dad, new number, lost my phone. Can you Zelle $1,284.50 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,"payment:Can you Zelle $1,284.50 || urgency:Need it in an hour"
+syn-0319,USPS Delivery Alert: a package requires a signature. Reply with a time window or reschedule at chase.com.,sms,legit,legit_delivery,
+syn-0320,Notice: Your Bitcoin wallet has a security issue. Enter your recovery phrase to secure it: irs-refund-claim.net,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:irs-refund-claim.net
+syn-0321,Your your carrier verification code is 125730. It expires in 10 minutes. Never share this code with anyone. Thank you.,sms,legit,legit_2fa,
+syn-0322,Citi: A purchase of $699.00 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Reply STOP to opt out.,sms,legit,legit_bank_alert,
+syn-0323,"Subject: Department of Treasury - Final Notice
+
+You owe $699.00 in back taxes. Failure to respond in 12 hours will result in seizure of assets. Pay by Target gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 12 hours will result in seizure of assets || payment:Pay by Target gift card
+syn-0324,"Hi Carlos, Hi, wrong number? Anyway, my uncle's trading team made me 180% returns in a month with USDT. I can show you how, spots are filling fast: tinyurl.com/y8fz2p",sms,scam,crypto_investment,"prize:180% returns in a month || urgency:show you how, spots are filling fast || link:tinyurl.com/y8fz2p"
+syn-0325,Notice: FedEx Delivery Alert: a package requires a signature. Reply with a time window or reschedule at fedex.com/track.,sms,legit,legit_delivery,
+syn-0326,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $89.00 on your Capital One account. To avoid permanent suspension, verify your identity and card number at fastpay-verify.click.
+
+Capital One Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $89.00 || credential_request:verify your identity and card number || link:fastpay-verify.click
+syn-0327,"Subject: Missing you
+
+Darling, I need $1,284.50 for a plane ticket to finally come see you. Wire it via USDT and keep this just between us.",email,scam,romance,"payment:$1,284.50 for a plane ticket || payment:Wire it via USDT || urgency:just between us"
+syn-0328,"Hi Dave, your carrier: Your bill of $2,500 is ready and will autopay on the 15th. View it in the T-Life app. Have a great day!",sms,legit,legit_carrier,
+syn-0329,"My love, I'm stuck at the airport and my card is blocked. Could you send $2,500 in Target gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us.",sms,scam,romance,"payment:send $2,500 in Target gift cards || urgency:pay you back the moment I land"
+syn-0330,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Target gift cards? Reply STOP to opt out.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Target gift cards"
+syn-0331,"Capital One: Unusual sign-in from Houston. If this wasn't you, confirm your login and PIN here: secure-verify-login.top Msg&data rates may apply.",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:secure-verify-login.top
+syn-0332,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $2,500 fine online at irs-refund-claim.net today to avoid court action.",email,scam,toll_fine,"threat:Traffic violation notice || payment:Pay the $2,500 fine online || link:irs-refund-claim.net || urgency:today"
+syn-0333,"Hi Jake, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal. Thank you.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0334,IRS: You are owed a tax refund of $412.37. Submit your SSN and bank details to claim: track-parcel-now.cc,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:track-parcel-now.cc
+syn-0335,"Hi Mom, this is my new number. My phone broke. Can you send $699.00 for a bill I need to pay today? It's urgent, I'll explain later. Reply STOP to opt out.",sms,scam,family_emergency,impersonation:this is my new number || payment:send $699.00 for a bill I need to pay today || urgency:It's urgent
+syn-0336,USPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: irs-refund-claim.net Thank you.,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:irs-refund-claim.net
+syn-0337,"FYI: Hi, wrong number? Anyway, my uncle's trading team made me 400% returns in a month with Ethereum. I can show you how, spots are filling fast: tinyurl.com/y8fz2p",sms,scam,crypto_investment,"prize:400% returns in a month || urgency:show you how, spots are filling fast || link:tinyurl.com/y8fz2p"
+syn-0338,your carrier Alert: Your bill of $412.37 is overdue and service will be suspended. Pay now at bit.ly/3xK9aQ. Reply STOP to opt out.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:bit.ly/3xK9aQ
+syn-0339,Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: tinyurl.com/y8fz2p,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:tinyurl.com/y8fz2p
+syn-0340,"Subject: Your statement is ready
+
+Your monthly statement is available in the Wells Fargo app. For your security we never include links asking you to sign in.",email,legit,legit_bank_alert,
+syn-0341,Citi: Your one-time passcode is 141792. We will never call or text asking for it.,sms,legit,legit_2fa,
+syn-0342,"Hi Priya, US Bank: Your one-time passcode is 405668. We will never call or text asking for it. Msg&data rates may apply.",sms,legit,legit_2fa,
+syn-0343,"FYI: T-Mobile: Your bill of $1,284.50 is ready and will autopay on the 15th. View it in the T-Life app. Have a great day!",sms,legit,legit_carrier,
+syn-0344,"Subject: Department of Treasury - Final Notice
+
+You owe $149.99 in back taxes. Failure to respond in 48 hours will result in seizure of assets. Pay by Target gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 48 hours will result in seizure of assets || payment:Pay by Target gift card
+syn-0345,Wells Fargo Alert: Your balance is below $50. Log in using the Wells Fargo app to review. Do not reply with personal info. Have a great day!,sms,legit,legit_bank_alert,
+syn-0346,"Dad, new number, lost my phone. Can you Zelle $699.00 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,payment:Can you Zelle $699.00 || urgency:Need it in an hour
+syn-0347,"Capital One: Fraud alert - we blocked a suspicious charge of $149.99. If this was you, call the number on the back of your card. Thank you.",sms,legit,legit_bank_alert,
+syn-0348,You've been chosen for a free iPhone 16! Only 3 left. Take our survey: usps-redelivery.info,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:usps-redelivery.info
+syn-0349,"NTTA: You have an unpaid toll balance of $2,500. Late fees will apply after today. Pay now: track-parcel-now.cc",sms,scam,toll_fine,"threat:unpaid toll balance of $2,500 || threat:Late fees will apply || payment:Pay now || link:track-parcel-now.cc"
+syn-0350,"Hi, this is Dr. Alvarez's office calling to confirm your appointment Tuesday at 2:15 PM. Please call us back at (214) 555-0188 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0351,"Subject: Missing you
+
+Darling, I need $699.00 for a plane ticket to finally come see you. Wire it via USDT and keep this just between us.",email,scam,romance,payment:$699.00 for a plane ticket || payment:Wire it via USDT || urgency:just between us
+syn-0352,T-Mobile: Your bill of $149.99 is ready and will autopay on the 15th. View it in the T-Life app.,sms,legit,legit_carrier,
+syn-0353,Reminder: you have an appointment with Dr. Nguyen on Monday at 9:30 AM. Reply C to confirm or call the office to reschedule. Reply STOP to opt out.,sms,legit,legit_appointment,
+syn-0354,"Subject: Your plan is changing
+
+Hi Carlos, effective next month your plan price changes. Details at t-mobile.com/myaccount. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0355,"Subject: Your order has shipped
+
+Hi Linda, your order shipped and should arrive Monday. Track it anytime at chase.com. No action needed.",email,legit,legit_delivery,
+syn-0356,"Hello, Reminder: you have an appointment with Dr. Patel on Thursday at 2:15 PM. Reply C to confirm or call the office to reschedule.",sms,legit,legit_appointment,
+syn-0357,"Notice: Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Thank you.",sms,legit,legit_friend,
+syn-0358,"T-Mobile: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit tinyurl.com/y8fz2p immediately. Thank you.",sms,scam,carrier_sim_swap,impersonation:T-Mobile || credential_request:reply with your account PIN || link:tinyurl.com/y8fz2p || urgency:immediately
+syn-0359,"Subject: Missing you
+
+Darling, I need $35.50 for a plane ticket to finally come see you. Wire it via Ethereum and keep this just between us.",email,scam,romance,payment:$35.50 for a plane ticket || payment:Wire it via Ethereum || urgency:just between us
+syn-0360,FYI: Wells Fargo Alert: Your balance is below $50. Log in using the Wells Fargo app to review. Do not reply with personal info. Reply STOP to opt out.,sms,legit,legit_bank_alert,
+syn-0361,"Hi Maria, Capital One: Fraud alert - we blocked a suspicious charge of $2,500. If this was you, call the number on the back of your card. Msg&data rates may apply.",sms,legit,legit_bank_alert,
+syn-0362,FYI: T-Mobile Alert: Your bill of $412.37 is overdue and service will be suspended. Pay now at chase-secure-alert.co.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:chase-secure-alert.co
+syn-0363,"Notice: Dad, new number, lost my phone. Can you Zelle $35.50 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,payment:Can you Zelle $35.50 || urgency:Need it in an hour
+syn-0364,"Hi Sam, Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Target gift cards? Msg&data rates may apply.",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Target gift cards"
+syn-0365,"Hello, FedEx Delivery Alert: a package requires a signature. Reply with a time window or reschedule at t-mobile.com/myaccount. Reply STOP to opt out.",sms,legit,legit_delivery,
+syn-0366,"FYI: T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 24h: cutt.ly/Rq7vPz",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 24h || link:cutt.ly/Rq7vPz"
+syn-0367,Bank of America: A purchase of $699.00 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Reply STOP to opt out.,sms,legit,legit_bank_alert,
+syn-0368,"Subject: Missing you
+
+Darling, I need $1,284.50 for a plane ticket to finally come see you. Wire it via Ethereum and keep this just between us.",email,scam,romance,"payment:$1,284.50 for a plane ticket || payment:Wire it via Ethereum || urgency:just between us"
+syn-0369,Reminder: you have an appointment with Dr. Brooks on Tuesday at 9:30 AM. Reply C to confirm or call the office to reschedule.,sms,legit,legit_appointment,
+syn-0370,Bank of America: Your one-time passcode is 249789. We will never call or text asking for it. Thank you.,sms,legit,legit_2fa,
+syn-0371,"Hi Carlos, T-Mobile: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit fastpay-verify.click immediately.",sms,scam,carrier_sim_swap,impersonation:T-Mobile || credential_request:reply with your account PIN || link:fastpay-verify.click || urgency:immediately
+syn-0372,"Hi Emily, Dad, new number, lost my phone. Can you Zelle $412.37 to a friend of mine? Need it in an hour. Msg&data rates may apply.",sms,scam,family_emergency,payment:Can you Zelle $412.37 || urgency:Need it in an hour
+syn-0373,"Hello, NTTA: You have an unpaid toll balance of $412.37. Late fees will apply after today. Pay now: fastpay-verify.click Have a great day!",sms,scam,toll_fine,threat:unpaid toll balance of $412.37 || threat:Late fees will apply || payment:Pay now || link:fastpay-verify.click
+syn-0374,G-571111 is your Google verification code. Msg&data rates may apply.,sms,legit,legit_2fa,
+syn-0375,"FYI: T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 24h: secure-verify-login.top Msg&data rates may apply.",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 24h || link:secure-verify-login.top"
+syn-0376,"Hi Jake, Part-time data entry job, $22/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only.",sms,scam,job_offer,"payment:$22/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0377,"Hi Mom, this is my new number. My phone broke. Can you send $412.37 for a bill I need to pay today? It's urgent, I'll explain later. Thank you.",sms,scam,family_emergency,impersonation:this is my new number || payment:send $412.37 for a bill I need to pay today || urgency:It's urgent
+syn-0378,"Subject: Missing you
+
+Darling, I need $699.00 for a plane ticket to finally come see you. Wire it via Ethereum and keep this just between us.",email,scam,romance,payment:$699.00 for a plane ticket || payment:Wire it via Ethereum || urgency:just between us
+syn-0379,"Subject: Department of Treasury - Final Notice
+
+You owe $2,500 in back taxes. Failure to respond in 48 hours will result in seizure of assets. Pay by Steam gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 48 hours will result in seizure of assets || payment:Pay by Steam gift card
+syn-0380,"Wells Fargo: Unusual sign-in from Plano. If this wasn't you, confirm your login and PIN here: secure-verify-login.top",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:secure-verify-login.top
+syn-0381,USPS: Your package 6318298757 could not be delivered. Pay a $1.99 redelivery fee at tinyurl.com/y8fz2p within 24h or it will be returned.,sms,scam,package_delivery,impersonation:USPS || payment:Pay a $1.99 redelivery fee || link:tinyurl.com/y8fz2p || urgency:within 24h
+syn-0382,T-Mobile: Your bill of $89.00 is ready and will autopay on the 15th. View it in the T-Life app.,sms,legit,legit_carrier,
+syn-0383,"Hi Jake, DHL Delivery Alert: a package requires a signature. Reply with a time window or reschedule at t-mobile.com/myaccount. Thank you.",sms,legit,legit_delivery,
+syn-0384,"FYI: Mom here, this is my new work number so save it. Call me when you get a chance, no rush.",sms,legit,legit_friend,
+syn-0385,"Subject: Department of Treasury - Final Notice
+
+You owe $35.50 in back taxes. Failure to respond in 2 hours will result in seizure of assets. Pay by Target gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 2 hours will result in seizure of assets || payment:Pay by Target gift card
+syn-0386,"Subject: Your plan is changing
+
+Hi Dave, effective next month your plan price changes. Details at chase.com. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0387,"Hi Jake, T-Mobile Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: track-parcel-now.cc",sms,scam,prize_lottery,"impersonation:T-Mobile || prize:won a $1,000 gift card || urgency:Claim in 2h || link:track-parcel-now.cc"
+syn-0388,"Your login code is 910838. If you didn't request this, you can ignore this message.",sms,legit,legit_2fa,
+syn-0389,UPS: Delivered. Your package was left at the front door at 11:45 AM.,sms,legit,legit_delivery,
+syn-0390,Your Citi card ending in 4821 was declined. Reactivate now to avoid fees: t-mobile-billing.support,sms,scam,bank_account_locked,urgency:Reactivate now || link:t-mobile-billing.support
+syn-0391,"My love, I'm stuck at the airport and my card is blocked. Could you send $412.37 in Steam gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Reply STOP to opt out.",sms,scam,romance,payment:send $412.37 in Steam gift cards || urgency:pay you back the moment I land
+syn-0392,"Hello, T-Mobile: Your bill of $35.50 is ready and will autopay on the 15th. View it in the T-Life app. Msg&data rates may apply.",sms,legit,legit_carrier,
+syn-0393,Notice: UPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: bit.ly/3xK9aQ Thank you.,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:bit.ly/3xK9aQ
+syn-0394,"Hi Carlos, G-898722 is your Google verification code.",sms,legit,legit_2fa,
+syn-0395,"hey it's Linda! running 10 min late, grab us a table?",sms,legit,legit_friend,
+syn-0396,T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app.,sms,legit,legit_carrier,
+syn-0397,Capital One: Your one-time passcode is 909801. We will never call or text asking for it. Msg&data rates may apply.,sms,legit,legit_2fa,
+syn-0398,Notice: Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: acct-update-now.xyz Thank you.,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:acct-update-now.xyz
+syn-0399,US Bank: A purchase of $412.37 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN.,sms,legit,legit_bank_alert,
+syn-0400,"Your login code is 928275. If you didn't request this, you can ignore this message.",sms,legit,legit_2fa,
+syn-0401,"Hello, Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Thank you.",sms,legit,legit_friend,
+syn-0402,"Hello, Dad, new number, lost my phone. Can you Zelle $699.00 to a friend of mine? Need it in an hour. Reply STOP to opt out.",sms,scam,family_emergency,payment:Can you Zelle $699.00 || urgency:Need it in an hour
+syn-0403,FYI: Your Windows license has expired. Renew now at tinyurl.com/y8fz2p to avoid data loss.,sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:tinyurl.com/y8fz2p
+syn-0404,UPS: Delivered. Your package was left at the front door at 4:00 PM. Msg&data rates may apply.,sms,legit,legit_delivery,
+syn-0405,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($2,500). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0406,"Hello, this is UPS. We have a package held for you. A small fee is required to release it. Call back right away at (214) 555-0188 or it will be destroyed.",voicemail,scam,package_delivery,payment:A small fee is required || urgency:Call back right away
+syn-0407,Reminder: you have an appointment with Dr. Brooks on Monday at 2:15 PM. Reply C to confirm or call the office to reschedule.,sms,legit,legit_appointment,
+syn-0408,"Hi Priya, Norton: Your subscription renewed for $412.37. If you didn't authorize this, call (972) 555-0142 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (972) 555-0142 now
+syn-0409,This is the Internal Revenue Service. A warrant has been issued for your arrest over unpaid taxes. Call back immediately at (469) 555-0171. Payment by gift card or wire is accepted.,voicemail,scam,irs_government,impersonation:Internal Revenue Service || threat:warrant has been issued for your arrest || urgency:Call back immediately || payment:Payment by gift card or wire is accepted
+syn-0410,"My love, I'm stuck at the airport and my card is blocked. Could you send $149.99 in Google Play gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Have a great day!",sms,scam,romance,payment:send $149.99 in Google Play gift cards || urgency:pay you back the moment I land
+syn-0411,"Grandma it's me, I'm in trouble, I got arrested and need bail money. Please don't tell Mom and Dad. Can you buy Apple gift cards?",sms,scam,family_emergency,"threat:trouble, I got arrested || payment:bail money || urgency:Please don't tell Mom and Dad || payment:buy Apple gift cards"
+syn-0412,UPS: Your package 3744112455 could not be delivered. Pay a $1.99 redelivery fee at bit.ly/3xK9aQ within 24h or it will be returned.,sms,scam,package_delivery,impersonation:UPS || payment:Pay a $1.99 redelivery fee || link:bit.ly/3xK9aQ || urgency:within 24h
+syn-0413,"Citi: Unusual sign-in from Plano. If this wasn't you, confirm your login and PIN here: t-mobile-billing.support",sms,scam,bank_account_locked,credential_request:confirm your login and PIN || link:t-mobile-billing.support
+syn-0414,"Hi, wrong number? Anyway, my uncle's trading team made me 180% returns in a month with Bitcoin. I can show you how, spots are filling fast: acct-update-now.xyz Thank you.",sms,scam,crypto_investment,"prize:180% returns in a month || urgency:show you how, spots are filling fast || link:acct-update-now.xyz"
+syn-0415,Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: chase-secure-alert.co,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:chase-secure-alert.co
+syn-0416,"FYI: Hi, wrong number? Anyway, my uncle's trading team made me 180% returns in a month with Ethereum. I can show you how, spots are filling fast: tinyurl.com/y8fz2p",sms,scam,crypto_investment,"prize:180% returns in a month || urgency:show you how, spots are filling fast || link:tinyurl.com/y8fz2p"
+syn-0417,"Hello, Hi Carlos! We found your resume. Earn $22/hr working from home, no experience needed. Limited spots. Text back to start: tinyurl.com/y8fz2p Have a great day!",sms,scam,job_offer,payment:Earn $22/hr working from home || urgency:Limited spots || link:tinyurl.com/y8fz2p
+syn-0418,"FYI: Hi, it's Priya from book club. Can you send me $35.50? Just your share of the tickets, Venmo is fine, I'll see you Monday too.",sms,legit,legit_friend,
+syn-0419,"Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Reply STOP to opt out.",sms,legit,legit_friend,
+syn-0420,"Subject: Your plan is changing
+
+Hi Sam, effective next month your plan price changes. Details at usps.com/tracking. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0421,"T-Mobile: A SIM change was requested on your line. If this wasn't you, reply with your account PIN or visit acct-update-now.xyz immediately.",sms,scam,carrier_sim_swap,impersonation:T-Mobile || credential_request:reply with your account PIN || link:acct-update-now.xyz || urgency:immediately
+syn-0422,FYI: T-Mobile Alert: Your bill of $35.50 is overdue and service will be suspended. Pay now at usps-redelivery.info.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:usps-redelivery.info
+syn-0423,IRS: You are owed a tax refund of $699.00. Submit your SSN and bank details to claim: chase-secure-alert.co,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:chase-secure-alert.co
+syn-0424,"Subject: Appointment confirmation
+
+Hi Aisha, this confirms your visit on Thursday at 4:00 PM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0425,"Subject: Verify your T-Mobile account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at track-parcel-now.cc within 12 hours.",email,scam,carrier_sim_swap,urgency:Verify your T-Mobile account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:track-parcel-now.cc
+syn-0426,FYI: USPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: track-parcel-now.cc Have a great day!,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:track-parcel-now.cc
+syn-0427,"Subject: Your order has shipped
+
+Hi Linda, your order shipped and should arrive Friday. Track it anytime at usps.com/tracking. No action needed.",email,legit,legit_delivery,
+syn-0428,Reminder: you have an appointment with Dr. Patel on Tuesday at 9:30 AM. Reply C to confirm or call the office to reschedule. Reply STOP to opt out.,sms,legit,legit_appointment,
+syn-0429,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($699.00). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0430,Notice: You've been chosen for a free iPhone 16! Only 3 left. Take our survey: bit.ly/3xK9aQ,sms,scam,prize_lottery,prize:free iPhone 16 || urgency:Only 3 left || link:bit.ly/3xK9aQ
+syn-0431,"Subject: Traffic violation notice
+
+A camera recorded a violation under your plate. Pay the $1,284.50 fine online at acct-update-now.xyz today to avoid court action.",email,scam,toll_fine,"threat:Traffic violation notice || payment:Pay the $1,284.50 fine online || link:acct-update-now.xyz || urgency:today"
+syn-0432,"Hi Sam, NTTA: You have an unpaid toll balance of $89.00. Late fees will apply after today. Pay now: usps-redelivery.info",sms,scam,toll_fine,threat:unpaid toll balance of $89.00 || threat:Late fees will apply || payment:Pay now || link:usps-redelivery.info
+syn-0433,"FYI: Hi, it's Tom from book club. Can you send me $35.50? Just your share of the tickets, Venmo is fine, I'll see you Tuesday too.",sms,legit,legit_friend,
+syn-0434,"Dad, new number, lost my phone. Can you Zelle $89.00 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,payment:Can you Zelle $89.00 || urgency:Need it in an hour
+syn-0435,"Subject: Your order has shipped
+
+Hi Jake, your order shipped and should arrive Thursday. Track it anytime at usps.com/tracking. No action needed.",email,legit,legit_delivery,
+syn-0436,"Subject: You are our lucky winner!
+
+Your number was selected in the International Lottery ($412.37). To release funds, pay a processing fee and send your ID and bank account.",email,scam,prize_lottery,prize:You are our lucky winner! || payment:pay a processing fee || credential_request:send your ID and bank account
+syn-0437,Reminder: you have an appointment with Dr. Nguyen on Monday at 4:00 PM. Reply C to confirm or call the office to reschedule. Reply STOP to opt out.,sms,legit,legit_appointment,
+syn-0438,IRS: You are owed a tax refund of $149.99. Submit your SSN and bank details to claim: t-mobile-billing.support Msg&data rates may apply.,sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:t-mobile-billing.support
+syn-0439,"Norton: Your subscription renewed for $699.00. If you didn't authorize this, call (214) 555-0188 now for a refund. Msg&data rates may apply.",sms,scam,tech_support,impersonation:Norton || urgency:call (214) 555-0188 now
+syn-0440,"Bank of America: Fraud alert - we blocked a suspicious charge of $699.00. If this was you, call the number on the back of your card. Have a great day!",sms,legit,legit_bank_alert,
+syn-0441,"Subject: Your plan is changing
+
+Hi Jake, effective next month your plan price changes. Details at t-mobile.com/myaccount. Questions? Dial 611 from your phone.",email,legit,legit_carrier,
+syn-0442,Your Citi card ending in 4821 was declined. Reactivate now to avoid fees: usps-redelivery.info Msg&data rates may apply.,sms,scam,bank_account_locked,urgency:Reactivate now || link:usps-redelivery.info
+syn-0443,"Subject: Department of Treasury - Final Notice
+
+You owe $149.99 in back taxes. Failure to respond in 2 hours will result in seizure of assets. Pay by Target gift card and send the code.",email,scam,irs_government,impersonation:Department of Treasury || threat:Failure to respond in 2 hours will result in seizure of assets || payment:Pay by Target gift card
+syn-0444,"Hello, Did you see the game last night?? unreal. Dinner Monday?",sms,legit,legit_friend,
+syn-0445,"FYI: My love, I'm stuck at the airport and my card is blocked. Could you send $89.00 in Google Play gift cards? I'll pay you back the moment I land. Please don't tell anyone, they won't understand us. Msg&data rates may apply.",sms,scam,romance,payment:send $89.00 in Google Play gift cards || urgency:pay you back the moment I land
+syn-0446,"Hello, Capital One: A purchase of $1,284.50 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN. Reply STOP to opt out.",sms,legit,legit_bank_alert,
+syn-0447,"Hello, Part-time data entry job, $22/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Have a great day!",sms,scam,job_offer,"payment:$22/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0448,Your your carrier verification code is 485005. It expires in 10 minutes. Never share this code with anyone. Thank you.,sms,legit,legit_2fa,
+syn-0449,"Hi, this is Dr. Nguyen's office calling to confirm your appointment Friday at 2:15 PM. Please call us back at (214) 555-0188 if you need to change it. Thank you.",voicemail,legit,legit_appointment,
+syn-0450,Notice: T-Mobile Alert: Your bill of $149.99 is overdue and service will be suspended. Pay now at secure-verify-login.top.,sms,scam,carrier_sim_swap,threat:overdue and service will be suspended || payment:Pay now || link:secure-verify-login.top
+syn-0451,"Hi Sam, Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Msg&data rates may apply.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0452,Reminder: you have an appointment with Dr. Brooks on Friday at 4:00 PM. Reply C to confirm or call the office to reschedule. Thank you.,sms,legit,legit_appointment,
+syn-0453,FYI: G-366244 is your Google verification code. Reply STOP to opt out.,sms,legit,legit_2fa,
+syn-0454,USPS Notice: Final attempt. Address incomplete for parcel. Confirm your address and card details: usps-redelivery.info Reply STOP to opt out.,sms,scam,package_delivery,urgency:Final attempt || credential_request:Confirm your address and card details || link:usps-redelivery.info
+syn-0455,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $35.50 via acct-update-now.xyz to release your package.
+
+USPS Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $35.50 || link:acct-update-now.xyz
+syn-0456,Notice: Your T-Mobile verification code is 421418. It expires in 10 minutes. Never share this code with anyone. Reply STOP to opt out.,sms,legit,legit_2fa,
+syn-0457,Your Bank of America card ending in 4821 was declined. Reactivate now to avoid fees: acct-update-now.xyz Msg&data rates may apply.,sms,scam,bank_account_locked,urgency:Reactivate now || link:acct-update-now.xyz
+syn-0458,"Hi Jake, Part-time data entry job, $48/hr, paid daily. Message us your full name and bank info on Telegram to be onboarded. Today only. Thank you.",sms,scam,job_offer,"payment:$48/hr, paid daily || credential_request:Message us your full name and bank info || urgency:Today only"
+syn-0459,FYI: USPS Delivery Alert: a package requires a signature. Reply with a time window or reschedule at fedex.com/track. Have a great day!,sms,legit,legit_delivery,
+syn-0460,"Dad, new number, lost my phone. Can you Zelle $412.37 to a friend of mine? Need it in an hour.",sms,scam,family_emergency,payment:Can you Zelle $412.37 || urgency:Need it in an hour
+syn-0461,"Subject: Your order has shipped
+
+Hi Maria, your order shipped and should arrive Tuesday. Track it anytime at usps.com/tracking. No action needed.",email,legit,legit_delivery,
+syn-0462,"Hello, USPS: Delivered. Your package was left at the front door at 2:15 PM.",sms,legit,legit_delivery,
+syn-0463,"Norton: Your subscription renewed for $699.00. If you didn't authorize this, call (972) 555-0142 now for a refund. Have a great day!",sms,scam,tech_support,impersonation:Norton || urgency:call (972) 555-0142 now
+syn-0464,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $149.99 via fastpay-verify.click to release your package.
+
+USPS Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $149.99 || link:fastpay-verify.click
+syn-0465,FYI: Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: usps-redelivery.info,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:usps-redelivery.info
+syn-0466,Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: irs-refund-claim.net,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:irs-refund-claim.net
+syn-0467,"Hi Linda, IRS: You are owed a tax refund of $35.50. Submit your SSN and bank details to claim: irs-refund-claim.net Have a great day!",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:irs-refund-claim.net
+syn-0468,"Hi, wrong number? Anyway, my uncle's trading team made me 180% returns in a month with Bitcoin. I can show you how, spots are filling fast: tinyurl.com/y8fz2p Thank you.",sms,scam,crypto_investment,"prize:180% returns in a month || urgency:show you how, spots are filling fast || link:tinyurl.com/y8fz2p"
+syn-0469,"Subject: Guaranteed 400% returns
+
+Join our exclusive Ethereum platform. Deposit just $1,284.50 today and double it in 7 days, risk free. Offer ends tonight.",email,scam,crypto_investment,"prize:Guaranteed 400% returns || payment:Deposit just $1,284.50 || prize:double it in 7 days, risk free || urgency:Offer ends tonight"
+syn-0470,This is the Internal Revenue Service. A warrant has been issued for your arrest over unpaid taxes. Call back immediately at (512) 555-0123. Payment by gift card or wire is accepted.,voicemail,scam,irs_government,impersonation:Internal Revenue Service || threat:warrant has been issued for your arrest || urgency:Call back immediately || payment:Payment by gift card or wire is accepted
+syn-0471,Chase: A purchase of $149.99 was made on your card ending 4821. Reply YES if this was you or NO if not. We will never ask for your PIN.,sms,legit,legit_bank_alert,
+syn-0472,"FYI: your carrier Rewards: Congrats! You've won a $1,000 gift card! Claim in 24h: track-parcel-now.cc",sms,scam,prize_lottery,"impersonation:your carrier || prize:won a $1,000 gift card || urgency:Claim in 24h || link:track-parcel-now.cc"
+syn-0473,DHL: Your package 5981141277 could not be delivered. Pay a $1.99 redelivery fee at irs-refund-claim.net within 24h or it will be returned.,sms,scam,package_delivery,impersonation:DHL || payment:Pay a $1.99 redelivery fee || link:irs-refund-claim.net || urgency:within 24h
+syn-0474,Reminder: you have an appointment with Dr. Brooks on Monday at 9:30 AM. Reply C to confirm or call the office to reschedule. Msg&data rates may apply.,sms,legit,legit_appointment,
+syn-0475,"Mom here, this is my new work number so save it. Call me when you get a chance, no rush. Thank you.",sms,legit,legit_friend,
+syn-0476,Your Ethereum wallet has a security issue. Enter your recovery phrase to secure it: acct-update-now.xyz Msg&data rates may apply.,sms,scam,crypto_investment,threat:security issue || credential_request:Enter your recovery phrase || link:acct-update-now.xyz
+syn-0477,Notice: Chase: Your one-time passcode is 270875. We will never call or text asking for it.,sms,legit,legit_2fa,
+syn-0478,Notice: FedEx: Delivered. Your package was left at the front door at 9:30 AM. Msg&data rates may apply.,sms,legit,legit_delivery,
+syn-0479,"Hi Emily, NTTA: You have an unpaid toll balance of $35.50. Late fees will apply after today. Pay now: bit.ly/3xK9aQ Thank you.",sms,scam,toll_fine,threat:unpaid toll balance of $35.50 || threat:Late fees will apply || payment:Pay now || link:bit.ly/3xK9aQ
+syn-0480,"your carrier Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: bit.ly/3xK9aQ",sms,scam,prize_lottery,"impersonation:your carrier || prize:won a $1,000 gift card || urgency:Claim in 2h || link:bit.ly/3xK9aQ"
+syn-0481,"Hi Dave! We found your resume. Earn $48/hr working from home, no experience needed. Limited spots. Text back to start: secure-verify-login.top",sms,scam,job_offer,payment:Earn $48/hr working from home || urgency:Limited spots || link:secure-verify-login.top
+syn-0482,"Hello, FedEx: Delivered. Your package was left at the front door at 11:45 AM.",sms,legit,legit_delivery,
+syn-0483,"Subject: Verify your your carrier account
+
+You qualify for a free phone upgrade. Log in with your PIN and password at irs-refund-claim.net within 2 hours.",email,scam,carrier_sim_swap,urgency:Verify your your carrier account || prize:free phone upgrade || credential_request:Log in with your PIN and password || link:irs-refund-claim.net
+syn-0484,Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: t-mobile-billing.support,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:t-mobile-billing.support
+syn-0485,"Hi Priya, Hi Priya, I'm sorry to text out of the blue. I think we matched online... I feel a real connection. Can we move to WhatsApp? I'm a military engineer overseas and rarely get signal.",sms,scam,romance,link:WhatsApp || impersonation:military engineer overseas
+syn-0486,"Notice: IRS: You are owed a tax refund of $2,500. Submit your SSN and bank details to claim: chase-secure-alert.co",sms,scam,irs_government,impersonation:IRS || credential_request:Submit your SSN and bank details || link:chase-secure-alert.co
+syn-0487,"Subject: Action Required - Account Suspended
+
+Dear Customer,
+
+We detected a suspicious transaction of $412.37 on your Capital One account. To avoid permanent suspension, verify your identity and card number at tinyurl.com/y8fz2p.
+
+Capital One Security Team",email,scam,bank_account_locked,urgency:Action Required || threat:suspicious transaction of $412.37 || credential_request:verify your identity and card number || link:tinyurl.com/y8fz2p
+syn-0488,"FYI: Wells Fargo: Fraud alert - we blocked a suspicious charge of $699.00. If this was you, call the number on the back of your card.",sms,legit,legit_bank_alert,
+syn-0489,"Hi Priya, FedEx Delivery Alert: a package requires a signature. Reply with a time window or reschedule at usps.com/tracking.",sms,legit,legit_delivery,
+syn-0490,"Hi Emily, NTTA: You have an unpaid toll balance of $149.99. Late fees will apply after today. Pay now: cutt.ly/Rq7vPz",sms,scam,toll_fine,threat:unpaid toll balance of $149.99 || threat:Late fees will apply || payment:Pay now || link:cutt.ly/Rq7vPz
+syn-0491,"Hello, Norton: Your subscription renewed for $1,284.50. If you didn't authorize this, call (800) 555-0199 now for a refund.",sms,scam,tech_support,impersonation:Norton || urgency:call (800) 555-0199 now
+syn-0492,FYI: T-Mobile: You've used 80% of your high-speed data. Manage your plan in the T-Life app.,sms,legit,legit_carrier,
+syn-0493,"Subject: Appointment confirmation
+
+Hi Jake, this confirms your visit on Tuesday at 11:45 AM. Please arrive 10 minutes early and bring your insurance card.",email,legit,legit_appointment,
+syn-0494,"Subject: Job offer - accept today
+
+Congratulations! You've been hired as a remote assistant. We'll send a check for $89.00; deposit it and wire back the extra for equipment. Send your SSN and bank info to set up payroll.",email,scam,job_offer,urgency:accept today || payment:deposit it and wire back the extra for equipment || credential_request:Send your SSN and bank info
+syn-0495,FYI: Texas Toll Services: Final notice - unpaid toll of $11.40. Pay within 12 hours to avoid a $50 penalty and license hold: fastpay-verify.click Reply STOP to opt out.,sms,scam,toll_fine,impersonation:Texas Toll Services || threat:unpaid toll || urgency:Pay within 12 hours || threat:$50 penalty and license hold || link:fastpay-verify.click
+syn-0496,Your T-Mobile verification code is 328063. It expires in 10 minutes. Never share this code with anyone.,sms,legit,legit_2fa,
+syn-0497,"Hi Tom, Did you see the game last night?? unreal. Dinner Monday?",sms,legit,legit_friend,
+syn-0498,"Hi Emily, Your Windows license has expired. Renew now at secure-verify-login.top to avoid data loss.",sms,scam,tech_support,threat:Your Windows license has expired || urgency:Renew now || link:secure-verify-login.top
+syn-0499,"Subject: Delivery failed - action needed
+
+We tried to deliver your parcel but a customs fee is required. Pay $412.37 via bit.ly/3xK9aQ to release your package.
+
+USPS Customer Care",email,scam,package_delivery,urgency:action needed || credential_request:a customs fee is required || payment:Pay $412.37 || link:bit.ly/3xK9aQ
+syn-0500,"your carrier Rewards: Congrats! You've won a $1,000 gift card! Claim in 2h: tinyurl.com/y8fz2p Have a great day!",sms,scam,prize_lottery,"impersonation:your carrier || prize:won a $1,000 gift card || urgency:Claim in 2h || link:tinyurl.com/y8fz2p"

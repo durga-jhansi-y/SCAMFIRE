@@ -1,0 +1,9 @@
+{
+  "name": "scam-fire-drill",
+  "private": true,
+  "scripts": {
+    "setup": "pip install -r backend/requirements.txt && npm install --prefix frontend",
+    "dev": "concurrently -k -n api,web -c blue,green \"python -m uvicorn main:app --app-dir backend --port 8000\" \"npm run dev --prefix frontend\""
+  },
+  "devDependencies": { "concurrently": "9.1.0" }
+}

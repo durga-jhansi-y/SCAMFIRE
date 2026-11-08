@@ -1,0 +1,107 @@
+{
+  "Held-out synthetic (n=100)": {
+    "Baseline (TF-IDF + LR)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "acc": 1.0,
+      "tn": 42,
+      "fp": 0,
+      "fn": 0,
+      "tp": 58,
+      "ece": 0.09632140299847314
+    },
+    "Ours, uncalibrated": {
+      "precision": 1.0,
+      "recall": 0.9482758620689655,
+      "f1": 0.9734513274336283,
+      "acc": 0.97,
+      "tn": 42,
+      "fp": 0,
+      "fn": 3,
+      "tp": 55,
+      "ece": 0.0485018752708678
+    },
+    "Ours (calibrated)": {
+      "precision": 1.0,
+      "recall": 0.9482758620689655,
+      "f1": 0.9734513274336283,
+      "acc": 0.97,
+      "tn": 42,
+      "fp": 0,
+      "fn": 3,
+      "tp": 55,
+      "ece": 0.05414716174841587
+    }
+  },
+  "Hard set 1, new wording (n=24; used to guide signal lexicons, so no longer fully unseen)": {
+    "Baseline (TF-IDF + LR)": {
+      "precision": 0.6875,
+      "recall": 0.9166666666666666,
+      "f1": 0.7857142857142857,
+      "acc": 0.75,
+      "tn": 7,
+      "fp": 5,
+      "fn": 1,
+      "tp": 11,
+      "ece": 0.11161679934173066
+    },
+    "Ours, uncalibrated": {
+      "precision": 0.75,
+      "recall": 0.5,
+      "f1": 0.6,
+      "acc": 0.6666666666666666,
+      "tn": 10,
+      "fp": 2,
+      "fn": 6,
+      "tp": 6,
+      "ece": 0.15679769586521078
+    },
+    "Ours (calibrated)": {
+      "precision": 0.75,
+      "recall": 0.5,
+      "f1": 0.6,
+      "acc": 0.6666666666666666,
+      "tn": 10,
+      "fp": 2,
+      "fn": 6,
+      "tp": 6,
+      "ece": 0.15169431224636803
+    }
+  },
+  "Hard set 2, fresh hold-out (n=16; written after the lexicons were frozen)": {
+    "Baseline (TF-IDF + LR)": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8888888888888888,
+      "acc": 0.875,
+      "tn": 6,
+      "fp": 2,
+      "fn": 0,
+      "tp": 8,
+      "ece": 0.1663534447426794
+    },
+    "Ours, uncalibrated": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "acc": 0.875,
+      "tn": 8,
+      "fp": 0,
+      "fn": 2,
+      "tp": 6,
+      "ece": 0.12036437956510375
+    },
+    "Ours (calibrated)": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "acc": 0.875,
+      "tn": 8,
+      "fp": 0,
+      "fn": 2,
+      "tp": 6,
+      "ece": 0.11612602571738406
+    }
+  }
+}

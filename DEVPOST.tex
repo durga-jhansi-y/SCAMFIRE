@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=2pt, topsep=4pt}
+\title{Scam Fire Drill\\[2pt]\large A personal scam-resistance trainer and real-time checker}
+\author{HackUTD 2026 \,--\, T-Mobile Scam \& Fraud Challenge \,+\, NVIDIA Nemotron Track}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Inspiration}
+Most scam tools do one thing: they say ``scam'' or ``not scam'' after the message has already landed. But the people who lose the most money are often the ones least able to judge that answer, such as grandparents who get a ``Hi Mom, new number'' text, or anyone rushed by a fake bank alert. A verdict alone does not change what they do next, and it does not make them harder to fool next time.
+
+T-Mobile's challenge asked for scam protection ``in ways we haven't thought of yet'' and said detection should be a core piece, not the whole product. So we built \textbf{Scam Fire Drill}. Like a fire drill, you practice \emph{before} the emergency, and when a real suspicious message arrives, you get a clear answer, an honest confidence level, and concrete next steps.
+
+\section*{What It Does}
+\paragraph{Drill mode (practice).}
+\begin{itemize}
+  \item Realistic messages appear as a text, email, or voicemail transcript. The user chooses \textbf{Scam} or \textbf{Safe}.
+  \item After each answer: the truth, the red flags highlighted \emph{inside} the message, and the AI's confidence next to the user's guess (``You and the AI both caught this one'' or ``The AI was only 62\% sure; here is why it is tricky'').
+  \item It adapts: categories the user misses come up more often.
+  \item Each round ends with a \textbf{Scam Resistance Score}, a per-category breakdown, and the top three habits to build.
+\end{itemize}
+
+\paragraph{Check mode (real-time protection).}
+The user pastes a suspicious message and gets a verdict (\textbf{scam}, \textbf{safe}, or \textbf{unsure}), a calibrated confidence, the scam category, highlighted warning signs, and clear next steps (for example, ``Call your bank using the number on your card, not this one. Forward it to 7726 (SPAM)'').
+
+\paragraph{Privacy by design.}
+Personal details (phone numbers, emails, names, card and account numbers, addresses) are removed locally \emph{before} anything could reach an LLM, and the user can see the redacted version. Pasted messages are never stored, and drill progress lives only in the user's browser.
+
+\section*{How We Built It}
+\begin{itemize}
+  \item \textbf{Stack.} Python and FastAPI on the backend; React, Vite, and TypeScript on the frontend, designed mobile-first with a text-size control and large tap targets.
+  \item \textbf{Data.} T-Mobile's dataset was not available to us, so we wrote a generator for about 500 labeled synthetic messages (60\% scam, 40\% legitimate) across 11 scam types plus legitimate messages, including near-misses such as real fraud alerts and a friend asking for \$20. We also hand-wrote two small ``hard'' sets in new wording to test generalization.
+  \item \textbf{Detector.} A TF-IDF plus logistic-regression \emph{baseline}, and an improved detector that blends a text model with a signals-only model (urgency, payment requests, impersonation, look-alike domains, shortened links, credential requests), then calibrates the output so probabilities mean what they say.
+  \item \textbf{Honest verdicts.} The detector may answer ``unsure,'' and it calls a message safe only when it is very sure, because telling someone a scam is safe is the worst mistake.
+  \item \textbf{Nemotron agent (NVIDIA track).} A multi-step, tool-calling agent over NVIDIA's OpenAI-compatible API, with the tools \texttt{redact\_pii}, \texttt{classify}, \texttt{lookup\_taxonomy}, \texttt{explain\_red\_flags}, \texttt{recommend\_next\_steps}, \texttt{generate\_drill}, and \texttt{get\_user\_weak\_spots}. In Check mode it plans: redact, classify, analyze deeper if unsure, map to the taxonomy, then explain and give next steps. In Drill mode it writes \emph{new} practice messages aimed at the user's weak spots. A ``How I decided'' panel shows each step. \emph{Status at submission: the agent code is written but has not yet been tested against live Nemotron.}
+  \item \textbf{Agent privacy guards.} The model never sees the raw message, only the redacted version. A guard blocks any LLM request that still contains an email, SSN, card number, or phone number. The agent may only \emph{raise} an ``unsure'' verdict to ``scam''; it can never turn one into a confident ``safe.''
+\end{itemize}
+
+\section*{How We Measure Accuracy}
+We report precision, recall, F1, confusion matrices, per-category accuracy, and calibration for the baseline versus our detector. Calibration is measured with the expected calibration error over $B$ confidence bins:
+\begin{equation}
+  \mathrm{ECE} \;=\; \sum_{b=1}^{B} \frac{n_b}{N}\,\bigl|\,\mathrm{acc}(b) - \mathrm{conf}(b)\,\bigr| ,
+\end{equation}
+where $n_b$ is the number of messages in bin $b$, $N$ is the total, $\mathrm{acc}(b)$ is the observed scam rate in the bin, and $\mathrm{conf}(b)$ is the average predicted probability. Lower is better: when we say ``80\%,'' we should be right about 80\% of the time. F1 is the harmonic mean of precision $P$ and recall $R$:
+\begin{equation}
+  F_1 \;=\; \frac{2PR}{P + R}.
+\end{equation}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Test set & Baseline $F_1$ & Ours $F_1$ & ECE (baseline $\to$ ours) \\
+\midrule
+Held-out synthetic ($n=100$) & 1.000 & 0.973 & $0.096 \to 0.054$ \\
+Fresh hard set ($n=16$, new wording) & 0.889 & 0.857 & $0.166 \to 0.116$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+On the fresh hard set our precision is $1.00$ versus $0.80$ for the baseline, and across all test sets we \emph{never} confidently called a scam ``safe.'' We did not beat the baseline on raw $F_1$, and we say so.
+
+\section*{Challenges We Ran Into}
+\begin{itemize}
+  \item \textbf{Synthetic data makes easy tests.} The baseline scored a perfect $1.000$ on the random split because test messages share templates with training ones. That number is not meaningful, so we added hand-written hard sets and report them separately.
+  \item \textbf{Our first ``improved'' detector was worse on unfamiliar wording.} It under-called scams with no obvious cue words. Instead of hiding this, we changed the product behavior: an asymmetric ``unsure'' zone that favors caution.
+  \item \textbf{Honest drill confidence.} The detector was trained on the same messages shown in the game, so its confidence would look inflated. We precompute out-of-fold predictions so every card is scored by a model that never saw it.
+  \item \textbf{Tricky near-misses.} A scam asking for a gift card and a real friend asking for \$20 look almost identical on the surface. Some messages are genuinely ambiguous, and the right answer is ``unsure, verify another way.''
+  \item \textbf{Practical hurdles.} A Windows dev-server reload bug, PowerShell script restrictions, and keeping redaction aggressive without removing the signals the detector needs.
+\end{itemize}
+
+\section*{What We Learned}
+\begin{itemize}
+  \item Calibration and the willingness to say ``unsure'' matter more to trust than a single accuracy number.
+  \item Privacy is a design constraint, not an add-on. Enforcing it in code (guards, redaction before the model, a visible ``what was sent'' view) is more convincing than promising it.
+  \item For people who are not technical, the \emph{next step} matters more than the label.
+\end{itemize}
+
+\section*{What's Next}
+\begin{itemize}
+  \item Evaluate on T-Mobile's real data and taxonomy, and on real scam messages (everything here is synthetic).
+  \item Finish live Nemotron testing and measure how much it improves ``unsure'' cases.
+  \item Trusted Circle: with consent, alert a chosen family member on a high-risk message.
+  \item ``Turn this into a drill'': convert a real scam into a training card with personal details removed.
+\end{itemize}
+
+\section*{Built With}
+Python, TypeScript, FastAPI, Uvicorn, Pydantic, scikit-learn, NumPy, pandas, SciPy, joblib, React, Vite, NVIDIA Nemotron (OpenAI-compatible API). No hosted deployment and no database: training data is CSV, the model is a saved file, and drill progress is stored in the browser.
+
+\end{document}

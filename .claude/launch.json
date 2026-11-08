@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NoProfile",
+        "-Command",
+        "$env:Path = 'C:\\Program Files\\nodejs;' + $env:Path; npm.cmd run dev"
+      ],
+      "port": 5173
+    }
+  ]
+}
